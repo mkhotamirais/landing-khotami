@@ -32,7 +32,7 @@ export function BtnMm() {
 
 export function BtnMenu() {
   const { openMm, removeOpenMm } = useMm();
-  const [hoveredMenu, setHoveredMenu] = useState("Landing Page");
+  const [hoveredMenu, setHoveredMenu] = useState(null);
 
   return (
     <AnimatePresence>
@@ -48,7 +48,10 @@ export function BtnMenu() {
             <div key={item.label}>
               <motion.button
                 key={item.label}
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setHoveredMenu(item.label);
+                }}
                 className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
                 whileHover={{ scale: 1.1, backgroundColor: "rgba(0,0,0,.1)" }}
                 whileTap={{ scale: 0.9 }}
