@@ -12,7 +12,7 @@ const googleFontPairingMenus = [
   { title: "font-nunito", content: "font-nunitoSans" },
 ];
 
-export default function GoogleFontPairing() {
+export default function GoogleFontPairingTheory() {
   const [title, setTitle] = useState(null);
   const [content, setContent] = useState(null);
   const [active, setActive] = useState(0);
@@ -38,7 +38,7 @@ export default function GoogleFontPairing() {
           </button>
         ))}
       </div>
-      <h1 className={`${title}`}>Google Font Pairing</h1>
+      <h2 className={`${title} text-3xl`}>Google Font Pairing</h2>
       <p className={`${content}`}>
         Merriweather & Open Sans: Merriweather (untuk judul): Sebuah serif yang elegan dan mudah dibaca. Open Sans
         (untuk teks isi): Sebuah sans-serif yang bersih dan modern. <br />

@@ -4,29 +4,43 @@ import App from "./App.jsx";
 import "./index.css";
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Home from "./pages/Home.jsx";
-import Parallax1 from "./pages/Mockup/Parallax1.jsx";
-import Tictactoe from "./pages/Mockup/Tictactoe.jsx";
-import FlipText from "./pages/Mockup/FlipText.jsx";
-import Parallax2 from "./pages/Mockup/Parallax2.jsx";
-import FloatNav from "./pages/Mockup/FloatNav.jsx";
-import FloatNav2 from "./pages/Mockup/FloatNav2.jsx";
+import ColorTheory from "./pages/theory/ColorTheory.jsx";
+import GoogleFontPairingTheory from "./pages/theory/GoogleFontPairingTheory.jsx";
+import Webdecoded1 from "./pages/youtube/webdecoded/Webdecoded1.jsx";
+import Wdm1 from "./pages/youtube/web-design-mastery/Wdm1.jsx";
+import Snack from "./pages/games/Snack.jsx";
+import Tictactoe from "./pages/games/Tictactoe.jsx";
+import Parallax1 from "./pages/library/Parallax1.jsx";
+import Parallax2 from "./pages/library/Parallax2.jsx";
+import FloatNav1 from "./pages/library/FloatNav1.jsx";
+import FloatNav2 from "./pages/library/FloatNav2.jsx";
+import FlipText from "./pages/library/FlipText.jsx";
 import ErrorBoundary from "./ErrorBoundary.jsx";
-import Webdecoded from "./pages/youtube/webdecoded/Webdecoded.jsx";
-import Wds1 from "./pages/youtube/web-design-mastery/Wds1.jsx";
+import Lp1 from "./pages/landing-page/Lp1.jsx";
+import Lp2 from "./pages/landing-page/Lp2.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorBoundary />}>
       <Route index element={<Home />} />
-      <Route path="parallax1" element={<Parallax1 />} />
-      <Route path="parallax2" element={<Parallax2 />} />
+      {/* theroy */}
+      <Route path="color" element={<ColorTheory />} />
+      <Route path="google-font-pairing" element={<GoogleFontPairingTheory />} />
+      {/* youtube tutorial */}
+      <Route path="webdecoded-1" element={<Webdecoded1 />} />
+      <Route path="web-design-mastery-1" element={<Wdm1 />} />
+      {/* game */}
+      <Route path="snack" element={<Snack />} />
       <Route path="tictactoe" element={<Tictactoe />} />
+      {/* library */}
+      <Route path="parallax-1" element={<Parallax1 />} />
+      <Route path="parallax-2" element={<Parallax2 />} />
       <Route path="fliptext" element={<FlipText />} />
-      <Route path="floatnav" element={<FloatNav />} />
-      <Route path="floatnav2" element={<FloatNav2 />} />
-      {/* youtube */}
-      <Route path="webdecoded1" element={<Webdecoded />} />
-      <Route path="wds1" element={<Wds1 />} />
+      <Route path="float-nav-1" element={<FloatNav1 />} />
+      <Route path="float-nav-2" element={<FloatNav2 />} />
+      {/* landing page */}
+      <Route path="lp-1" element={<Lp1 />} />
+      <Route path="lp-2" element={<Lp2 />} />
     </Route>
   )
 );

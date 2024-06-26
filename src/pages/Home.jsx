@@ -1,10 +1,10 @@
-import GoogleFontPairing from "../components/GoogleFontPairing";
+import GoogleFontPairingTheory from "./theory/GoogleFontPairingTheory";
 
 export default function Home() {
   return (
     <div>
       Home
-      <GoogleFontPairing />
+      <GoogleFontPairingTheory />
     </div>
   );
 }

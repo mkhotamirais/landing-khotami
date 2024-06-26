@@ -9,7 +9,7 @@ const flaotNavMenus = [
   { label: "blog", icon: <FaBlog /> },
 ];
 
-export default function FloatNav() {
+export default function FloatNav1() {
   const scrollDirection = useScrollDirection();
   return (
     <section className="min-h-screen">

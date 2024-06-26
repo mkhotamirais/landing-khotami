@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "bebas-neue": ["Bebas Neue", "sans-serif"],
+        bebasNeue: ["Bebas Neue", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
         merriweather: ["Merriweather", "serif"],
         openSans: ["Open Sans", "sans-serif"],
         nunitoSans: ["Nunito Sans", "sans-serif"],

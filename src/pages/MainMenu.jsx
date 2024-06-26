@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useMm } from "../store/useMm";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { mainMenus } from "../lib/data.js";
+import { mainMenus } from "../lib/data";
 
 export function BtnMm() {
   const { openMm, toggleOpenMm } = useMm();
@@ -69,16 +69,16 @@ export function BtnMenu() {
                     <div className="border rounded-xl bg-white w-full text-left p-2">
                       <h3 className="text-lg font-medium mb-2">{item.label}</h3>
                       <div className="flex flex-wrap gap-1">
-                        {item.subMenus.map((itm) => (
+                        {item.subMenus.map((itm, i) => (
                           <Link
                             onClick={() => {
                               if (openMm) removeOpenMm();
                             }}
-                            to={itm}
-                            key={itm}
+                            to={itm.href}
+                            key={i}
                             className="text-sm p-2 border rounded-lg hover:text-cyan-500"
                           >
-                            {itm}
+                            {itm.label}
                           </Link>
                         ))}
                       </div>
