@@ -13,12 +13,14 @@ export default function Parallax1() {
   const smoothY4 = useSpring(y4, { stiffness: 100, damping: 30 });
   const smoothY5 = useSpring(y5, { stiffness: 100, damping: 20 });
   return (
-    <div className="relative border w-full mx-auto max-w-screen h-screen overflow-hidden">
-      <motion.div style={{ y: smoothY1 }} className="border absolute bg-blue-500 w-1/6 h-1/6 top-1/2" />
-      <motion.div style={{ y: smoothY2 }} className="absolute bg-red-500 w-1/6 h-1/6 left-1/2 top-1/2" />
-      <motion.div style={{ y: smoothY3 }} className="absolute bg-green-500 w-1/6 h-1/6 left-1/3 top-1/2" />
-      <motion.div style={{ y: smoothY4 }} className="absolute bg-purple-500 w-1/6 h-1/6 left-1/4 top-2/3" />
-      <motion.div style={{ y: smoothY5 }} className="absolute bg-orange-500 w-1/6 h-1/6 left-3/4 top-2/3" />
-    </div>
+    <section>
+      <div className="relative border w-full mx-auto max-w-screen h-screen overflow-hidden">
+        <motion.div style={{ y: smoothY1 }} className="border absolute bg-blue-500 w-1/6 h-1/6 top-1/2" />
+        <motion.div style={{ y: smoothY2 }} className="absolute bg-red-500 w-1/6 h-1/6 left-1/2 top-1/2" />
+        <motion.div style={{ y: smoothY3 }} className="absolute bg-green-500 w-1/6 h-1/6 left-1/3 top-1/2" />
+        <motion.div style={{ y: smoothY4 }} className="absolute bg-purple-500 w-1/6 h-1/6 left-1/4 top-2/3" />
+        <motion.div style={{ y: smoothY5 }} className="absolute bg-orange-500 w-1/6 h-1/6 left-3/4 top-2/3" />
+      </div>
+    </section>
   );
 }

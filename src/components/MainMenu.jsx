@@ -54,7 +54,6 @@ export function BtnMenu() {
                 }}
                 className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
                 whileHover={{ scale: 1.1, backgroundColor: "rgba(0,0,0,.1)" }}
-                whileTap={{ scale: 0.9 }}
                 onHoverStart={() => setHoveredMenu(item.label)}
                 onHoverEnd={() => setHoveredMenu(null)}
               >
@@ -72,7 +71,9 @@ export function BtnMenu() {
                       <div className="flex flex-wrap gap-1">
                         {item.subMenus.map((itm) => (
                           <Link
-                            onClick={removeOpenMm}
+                            onClick={() => {
+                              if (openMm) removeOpenMm();
+                            }}
                             to={itm}
                             key={itm}
                             className="text-sm p-2 border rounded-lg hover:text-cyan-500"

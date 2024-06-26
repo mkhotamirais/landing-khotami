@@ -12,6 +12,7 @@ import FloatNav from "./pages/Mockup/FloatNav.jsx";
 import FloatNav2 from "./pages/Mockup/FloatNav2.jsx";
 import ErrorBoundary from "./ErrorBoundary.jsx";
 import Webdecoded from "./pages/youtube/webdecoded/Webdecoded.jsx";
+import Wds1 from "./pages/youtube/web-design-mastery/Wds1.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="floatnav2" element={<FloatNav2 />} />
       {/* youtube */}
       <Route path="webdecoded1" element={<Webdecoded />} />
+      <Route path="wds1" element={<Wds1 />} />
     </Route>
   )
 );

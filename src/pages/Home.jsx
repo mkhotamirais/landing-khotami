@@ -1,3 +1,10 @@
+import GoogleFontPairing from "../components/GoogleFontPairing";
+
 export default function Home() {
-  return <div className="">Home</div>;
+  return (
+    <div>
+      Home
+      <GoogleFontPairing />
+    </div>
+  );
 }

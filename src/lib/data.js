@@ -19,6 +19,6 @@ export const mainMenus = [
   {
     label: "From Youtube",
     icon: FaYoutube,
-    subMenus: ["webdecoded1", "lainnya"],
+    subMenus: ["webdecoded1", "wds1"],
   },
 ];
