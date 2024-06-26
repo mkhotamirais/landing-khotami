@@ -9,10 +9,8 @@ export default function App() {
     removeOpenMm();
   };
   return (
-    <main className="min-h-[200vh] flex flex-col overflow-x-hidden" onClick={handleMain}>
-      <section className="overflow-x-hidden">
-        <Outlet />
-      </section>
+    <main className="min-h-[150vh] flex flex-col" onClick={handleMain}>
+      <Outlet />
       <BtnMm />
       <BtnMenu />
       <Clock className={"-z-50 fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 opacity-[0.03]"} />

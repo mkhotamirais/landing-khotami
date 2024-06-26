@@ -1,4 +1,4 @@
-import { FaComputer, FaGear } from "react-icons/fa6";
+import { FaComputer, FaGamepad, FaGear, FaYoutube } from "react-icons/fa6";
 
 export const mainMenus = [
   {
@@ -9,6 +9,16 @@ export const mainMenus = [
   {
     label: "Mockup",
     icon: FaGear,
-    subMenus: ["parallax1", "parallax2", "fliptext", "tictactoe"],
+    subMenus: ["parallax1", "parallax2", "fliptext", "floatnav", "floatnav2"],
+  },
+  {
+    label: "Game",
+    icon: FaGamepad,
+    subMenus: ["ular", "tictactoe"],
+  },
+  {
+    label: "From Youtube",
+    icon: FaYoutube,
+    subMenus: ["webdecoded1", "lainnya"],
   },
 ];
