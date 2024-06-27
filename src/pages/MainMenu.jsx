@@ -1,4 +1,4 @@
-import { FaBars, FaHouse, FaXmark } from "react-icons/fa6";
+import { FaBars, FaCaretLeft, FaHouse, FaUser, FaXmark } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 import { useMm } from "../store/useMm";
 import { useState } from "react";
@@ -7,26 +7,35 @@ import { mainMenus } from "../lib/data";
 
 export function BtnMm() {
   const { openMm, toggleOpenMm } = useMm();
+  const [hideBtn, setHideBtn] = useState(false);
   const handleClick = (e) => {
     e.stopPropagation();
     toggleOpenMm();
   };
   return (
-    <motion.button
-      onClick={handleClick}
-      className="z-50 fixed bottom-4 left-4 border rounded-full w-12 text-xl h-12 flex items-center justify-center shadow-xl"
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.9 }}
+    <motion.div
+      className={`z-50 fixed bottom-4 border rounded-full w-12 text-xl h-12 flex items-center justify-center shadow-xl`}
+      animate={{ left: hideBtn ? "-3rem" : "1rem" }}
+      transition={{ duration: 0.2, type: "spring", stiffness: 200, damping: 20 }}
     >
-      <motion.div
-        initial={false}
-        animate={{ rotate: openMm ? 180 : 0 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-        className="bg-gray-50 w-10 h-10 flex items-center justify-center rounded-full"
+      <motion.button onClick={handleClick} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+        <motion.div
+          initial={false}
+          animate={{ rotate: openMm ? 180 : 0 }}
+          transition={{ type: "spring", stiffness: 400, damping: 20 }}
+          className="bg-gray-50 w-10 h-10 flex items-center justify-center rounded-full"
+        >
+          {openMm ? <FaXmark className="text-xl" /> : <FaBars className="text-xl" />}
+        </motion.div>{" "}
+      </motion.button>
+      <button
+        onClick={() => setHideBtn((prev) => !prev)}
+        className={`${hideBtn ? "rotate-180" : ""} absolute left-full translate-x-2`}
       >
-        {openMm ? <FaXmark className="text-xl" /> : <FaBars className="text-xl" />}
-      </motion.div>{" "}
-    </motion.button>
+        <FaCaretLeft />
+      </button>
+      <BtnMenu />
+    </motion.div>
   );
 }
 
@@ -88,6 +97,14 @@ export function BtnMenu() {
               </motion.button>
             </div>
           ))}
+          <Link to="/portofolio-saya">
+            <motion.button
+              className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
+              whileHover={{ scale: 1.1 }}
+            >
+              <FaUser />
+            </motion.button>
+          </Link>
           <Link to="/">
             <motion.button
               className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"

@@ -22,11 +22,13 @@ import Bulb1 from "./pages/library/Bulb1.jsx";
 import Bulb2 from "./pages/library/Bulb2.jsx";
 import Clock from "./pages/tools/Clock.jsx";
 import Stopwatch from "./pages/tools/Stopwatch.jsx";
+import Portfolio from "./pages/portfolio/Portfolio.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorBoundary />}>
       <Route index element={<Home />} />
+      <Route path="portofolio-saya" element={<Portfolio />} />
       {/* theroy */}
       <Route path="color" element={<ColorTheory />} />
       <Route path="google-font-pairing" element={<GoogleFontPairingTheory />} />

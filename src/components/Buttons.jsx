@@ -18,10 +18,10 @@ export function Button({ children, onClick, className, disabled = false }) {
     <button
       disabled={disabled}
       onClick={onClick}
-      className={`${className} disabled:opacity-50 flex w-fit items-center justify-center`}
+      className={`${className} relative disabled:opacity-50 flex items-center justify-center`}
     >
       <motion.div
-        className="rounded-full p-3 relative"
+        className="rounded-full p-3 w-full"
         whileHover={{ backgroundColor: "#efefef" }}
         animate={{ backgroundColor: "#ffffff" }}
         transition={{ type: "tween", duration: 0.2 }}
