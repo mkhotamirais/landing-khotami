@@ -27,6 +27,7 @@ import SymbolColor from "./pages/apps/SymbolColor.jsx";
 import ProgressBar1 from "./pages/library/ProgressBar1.jsx";
 import ElementScroll1 from "./pages/library/ElementScroll1.jsx";
 import ElementScroll2 from "./pages/library/ElementScroll2.jsx";
+import FloatNav3 from "./pages/library/FloatNav3.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -54,6 +55,7 @@ const router = createBrowserRouter(
       <Route path="fliptext" element={<FlipText />} />
       <Route path="float-nav-1" element={<FloatNav1 />} />
       <Route path="float-nav-2" element={<FloatNav2 />} />
+      <Route path="float-nav-3" element={<FloatNav3 />} />
       <Route path="progress-bar-1" element={<ProgressBar1 />} />
       <Route path="element-scroll-1" element={<ElementScroll1 />} />
       <Route path="element-scroll-2" element={<ElementScroll2 />} />

@@ -42,6 +42,7 @@ export const mainMenus = [
       { href: "fliptext", label: "Flip Text" },
       { href: "float-nav-1", label: "Float Nav 1" },
       { href: "float-nav-2", label: "Float Nav 2" },
+      { href: "float-nav-3", label: "Float Nav 3" },
     ],
   },
   {

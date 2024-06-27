@@ -12,7 +12,7 @@ const flaotNavMenus = [
 export default function FloatNav1() {
   const scrollDirection = useScrollDirection();
   return (
-    <section className="min-h-screen">
+    <section className="min-h-[200vh]">
       <motion.nav
         className="border left-1/2 fixed top-5 rounded-full p-3 shadow-xl"
         initial={{ x: "-50%", y: 0 }}
@@ -25,7 +25,7 @@ export default function FloatNav1() {
           ))}
         </div>
       </motion.nav>
-      <div className="flex items-center justify-center h-screen text-center px-3">
+      <div className="flex items-center justify-center h-screen text-center px-3 fixed top-0">
         Navbar hilang ketika scroll ke bawah dan muncuk ketika scroll ke atas
       </div>
     </section>
