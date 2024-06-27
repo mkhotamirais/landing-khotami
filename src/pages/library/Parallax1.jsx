@@ -13,7 +13,7 @@ export default function Parallax1() {
   const smoothY4 = useSpring(y4, { stiffness: 100, damping: 30 });
   const smoothY5 = useSpring(y5, { stiffness: 100, damping: 20 });
   return (
-    <section>
+    <section className="min-h-[150vh]">
       <div className="relative border w-full mx-auto max-w-screen h-screen overflow-hidden">
         <motion.div style={{ y: smoothY1 }} className="border absolute bg-blue-500 w-1/6 h-1/6 top-1/2" />
         <motion.div style={{ y: smoothY2 }} className="absolute bg-red-500 w-1/6 h-1/6 left-1/2 top-1/2" />

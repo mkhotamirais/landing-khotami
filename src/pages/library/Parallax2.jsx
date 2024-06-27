@@ -1,3 +1,5 @@
+import Processing from "../../components/Processing";
+
 export default function Parallax2() {
-  return <div>Parallax2</div>;
+  return <Processing />;
 }

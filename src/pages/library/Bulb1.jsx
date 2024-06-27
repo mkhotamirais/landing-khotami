@@ -22,6 +22,17 @@ export default function Bulb1() {
   return (
     <div>
       <motion.div
+        animate={{ rotate: rotation }}
+        transition={{ duration: 0.3 }}
+        className="rounded-full w-fit border fixed  right-4 top-4 text-cyan-500"
+      >
+        <Button
+          onClick={handleClick} // Mengubah key untuk memicu ulang animasi
+        >
+          <FaRotateRight />
+        </Button>
+      </motion.div>
+      <motion.div
         key={animKey}
         id="blub1"
         className="flex flex-wrap gap-5 w-[95vw] md:w-1/2 mx-auto min-h-32 p-6 border rounded mt-32 items-center justify-center"
@@ -56,17 +67,6 @@ export default function Bulb1() {
             {item.label}
           </motion.div>
         ))}
-      </motion.div>
-      <motion.div
-        animate={{ rotate: rotation }}
-        transition={{ duration: 0.3 }}
-        className="rounded-full w-fit border fixed  right-4 bottom-4 text-cyan-500"
-      >
-        <Button
-          onClick={handleClick} // Mengubah key untuk memicu ulang animasi
-        >
-          <FaRotateRight />
-        </Button>
       </motion.div>
     </div>
   );

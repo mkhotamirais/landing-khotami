@@ -1,9 +1,10 @@
-import { FaBars, FaCaretLeft, FaHouse, FaUser, FaXmark } from "react-icons/fa6";
+import { FaBars, FaCaretLeft, FaRegUser, FaXmark } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMm } from "../../store/useMm";
 import { mainMenus } from "../../lib/data";
+import { IoHomeOutline } from "react-icons/io5";
 
 export function BtnMm() {
   const { openMm, toggleOpenMm } = useMm();
@@ -85,7 +86,8 @@ export function BtnMenu() {
                             }}
                             to={itm.href}
                             key={i}
-                            className="text-sm p-2 border rounded-lg hover:text-cyan-500"
+                            className="text-xs p-2 border rounded-lg hover:text-cyan-500"
+                            relative="path"
                           >
                             {itm.label}
                           </Link>
@@ -97,12 +99,13 @@ export function BtnMenu() {
               </motion.button>
             </div>
           ))}
+          <div className="border leading-none w-5 border-gray-400" />
           <Link to="/portofolio-saya">
             <motion.button
               className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
-              <FaUser />
+              <FaRegUser />
             </motion.button>
           </Link>
           <Link to="/">
@@ -110,7 +113,7 @@ export function BtnMenu() {
               className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
-              <FaHouse />
+              <IoHomeOutline />
             </motion.button>
           </Link>
         </motion.div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaArrowUpLong, FaGithub } from "react-icons/fa6";
+import { Button } from "../../components/Buttons";
 
 export function BackToTopBtn() {
   return (
@@ -14,8 +15,10 @@ export function BackToTopBtn() {
 
 export function GithubBtn() {
   return (
-    <a href="/">
-      <FaGithub />
+    <a href="https://github.com/mkhotamirais/landing-khotami" className="fixed top-4 right-4 z-10 text-xl">
+      <Button>
+        <FaGithub />
+      </Button>
     </a>
   );
 }
