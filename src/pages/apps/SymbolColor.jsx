@@ -30,7 +30,11 @@ export default function SymbolColor() {
         <div className="relative h-1/2 rounded-xl bg-gray-50 flex flex-col">
           <div className="h-5/6 flex flex-col overflow-y-scroll rounded p-2 gap-[0.2rem]">
             {symbolColorMenus
-              .filter((c) => c.nameEng.includes(search) || c.nameIdn.includes(search))
+              .filter(
+                (c) =>
+                  c.nameEng.toLowerCase().includes(search.toLowerCase()) ||
+                  c.nameIdn.toLowerCase().includes(search.toLowerCase())
+              )
               .map((item) => (
                 <motion.button
                   key={item.hex}
@@ -39,7 +43,7 @@ export default function SymbolColor() {
                   animate={{ backgroundColor: active === `${item.hex}` ? `${item.hex}` : "#afffff" }}
                   whileHover={{ backgroundColor: `${colorData.hex}` }}
                 >
-                  <div>
+                  <div className="text-left">
                     {item.nameEng} ({item.nameIdn})
                   </div>
                   <div className="flex gap-2 items-center">
@@ -48,6 +52,9 @@ export default function SymbolColor() {
                   </div>
                 </motion.button>
               ))}
+            <p className="text-center my-2">
+              Source: ChatGPT <br /> (44 colors available)
+            </p>
           </div>
           <div className={`${colorData.bgHex} h-1/6 rounded-xl m-1 gap-1 flex items-center justify-center`}>
             <span className="capitalize">{colorData.nameEng}</span>:
@@ -90,8 +97,8 @@ export function SearchColor({ search, setSearch }) {
       value={search}
       type="search"
       onChange={(e) => setSearch(e.target.value)}
-      className="border placeholder:text-sm w-full rounded-xl p-2 focus:outline-cyan-500 mb-2"
-      placeholder="Search by name (eng/idn) [44 colors available]"
+      className="border w-full rounded-xl p-2 focus:outline-cyan-500 mb-2"
+      placeholder="Search by name (eng/idn)"
     />
   );
 }
