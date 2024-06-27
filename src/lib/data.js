@@ -1,7 +1,17 @@
-import { FaBookOpen, FaComputer, FaGamepad, FaYoutube, FaScrewdriverWrench } from "react-icons/fa6";
+import { FaBookOpen, FaComputer, FaGamepad, FaYoutube } from "react-icons/fa6";
 import { TbLibrary } from "react-icons/tb";
+import { GrAppsRounded } from "react-icons/gr";
 
 export const mainMenus = [
+  {
+    label: "Apps",
+    icon: GrAppsRounded,
+    subMenus: [
+      { href: "clock", label: "Clock" },
+      { href: "stopwatch", label: "Stopwatch" },
+      { href: "symbol-color", label: "Symbol Color" },
+    ],
+  },
   {
     label: "Landing Page",
     icon: FaComputer,
@@ -47,12 +57,10 @@ export const mainMenus = [
       { href: "google-font-pairing", label: "Google Font Pairing" },
     ],
   },
-  {
-    label: "Tools",
-    icon: FaScrewdriverWrench,
-    subMenus: [
-      { href: "clock", label: "Clock" },
-      { href: "stopwatch", label: "Stopwatch" },
-    ],
-  },
+];
+
+export const symbolColorMenus = [
+  { name: "red", hex: "#ff0000", bgHex: "bg-[#ff0000]" },
+  { name: "green", hex: "#00ff00", bgHex: "bg-[#00ff00]" },
+  { name: "blue", hex: "#0000ff", bgHex: "bg-[#0000ff]" },
 ];

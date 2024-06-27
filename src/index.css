@@ -14,3 +14,8 @@
     color: red;
   }
 }
+
+.overflow-x-scroll::-webkit-scrollbar,
+.overflow-y-scroll::-webkit-scrollbar {
+  display: none;
+}

@@ -20,15 +20,21 @@ import Lp1 from "./pages/landing-page/Lp1.jsx";
 import Lp2 from "./pages/landing-page/Lp2.jsx";
 import Bulb1 from "./pages/library/Bulb1.jsx";
 import Bulb2 from "./pages/library/Bulb2.jsx";
-import Clock from "./pages/tools/Clock.jsx";
-import Stopwatch from "./pages/tools/Stopwatch.jsx";
 import Portfolio from "./pages/portfolio/Portfolio.jsx";
+import Stopwatch from "./pages/apps/Stopwatch.jsx";
+import Clock from "./pages/apps/Clock.jsx";
+import SymbolColor from "./pages/apps/SymbolColor.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorBoundary />}>
       <Route index element={<Home />} />
       <Route path="portofolio-saya" element={<Portfolio />} />
+      {/* apps */}
+      <Route path="clock" element={<Clock />} />
+      <Route path="stopwatch" element={<Stopwatch />} />
+      <Route path="symbol-color" element={<SymbolColor />} />
+
       {/* theroy */}
       <Route path="color" element={<ColorTheory />} />
       <Route path="google-font-pairing" element={<GoogleFontPairingTheory />} />
@@ -49,9 +55,6 @@ const router = createBrowserRouter(
       {/* landing page */}
       <Route path="lp-1" element={<Lp1 />} />
       <Route path="lp-2" element={<Lp2 />} />
-      {/* tools */}
-      <Route path="clock" element={<Clock />} />
-      <Route path="stopwatch" element={<Stopwatch />} />
     </Route>
   )
 );

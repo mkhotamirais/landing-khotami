@@ -1,7 +1,7 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import { BtnMm } from "./pages/MainMenu";
 import { useMm } from "./store/useMm";
-import Clock from "./pages/tools/Clock";
+import Clock from "./pages/apps/Clock";
 
 export default function App() {
   const { removeOpenMm } = useMm();
