@@ -64,9 +64,3 @@ export const mainMenus = [
     ],
   },
 ];
-
-export const symbolColorMenus = [
-  { name: "red", hex: "#ff0000", bgHex: "bg-[#ff0000]" },
-  { name: "green", hex: "#00ff00", bgHex: "bg-[#00ff00]" },
-  { name: "blue", hex: "#0000ff", bgHex: "bg-[#0000ff]" },
-];

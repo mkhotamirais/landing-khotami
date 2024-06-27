@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { FaRotateRight } from "react-icons/fa6";
+import { Button } from "../../components/Buttons";
 
 const boxColorMenu = [
   { label: "red", color: "bg-red-500" },
@@ -9,11 +12,19 @@ const boxColorMenu = [
 ];
 
 export default function Bulb1() {
+  const [animKey, setAnimKey] = useState(0);
+  const [rotation, setRotation] = useState(0);
+
+  const handleClick = () => {
+    setAnimKey(animKey + 1);
+    setRotation(rotation + 360); // Menambah sudut rotasi
+  };
   return (
     <div>
       <motion.div
+        key={animKey}
         id="blub1"
-        className="flex flex-wrap gap-5 w-1/2 min-h-32 p-6 border rounded mx-auto mt-32 items-center justify-center"
+        className="flex flex-wrap gap-5 w-[95vw] md:w-1/2 mx-auto min-h-32 p-6 border rounded mt-32 items-center justify-center"
         variants={{
           hidden: { opacity: 0 },
           visible: {
@@ -45,6 +56,17 @@ export default function Bulb1() {
             {item.label}
           </motion.div>
         ))}
+      </motion.div>
+      <motion.div
+        animate={{ rotate: rotation }}
+        transition={{ duration: 0.3 }}
+        className="rounded-full w-fit border fixed  right-4 bottom-4 text-cyan-500"
+      >
+        <Button
+          onClick={handleClick} // Mengubah key untuk memicu ulang animasi
+        >
+          <FaRotateRight />
+        </Button>
       </motion.div>
     </div>
   );

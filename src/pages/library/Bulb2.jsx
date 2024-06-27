@@ -18,11 +18,11 @@ export default function Bulb2() {
   });
 
   return (
-    <div>
-      <div className="text-3xl text-center mt-20">Scroll (sampai ketinggian 50px) untuk memulai animasi</div>
+    <section className="min-h-[150vh]">
+      <div className="text-3xl text-center mt-20 px-3">Scroll (sampai ketinggian 50px) untuk memulai animasi</div>
       <motion.div
         id="blub1"
-        className="flex flex-wrap gap-5 w-1/2 min-h-32 p-6 border rounded mx-auto mt-[25vh] items-center justify-center"
+        className="flex flex-wrap gap-5 w-[90vw] md:w-1/2 mx-auto min-h-32 p-6 border rounded mt-32 items-center justify-center"
         variants={{
           hidden: { opacity: 0 },
           visible: {
@@ -57,6 +57,6 @@ export default function Bulb2() {
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </section>
   );
 }

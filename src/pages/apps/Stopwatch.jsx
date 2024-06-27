@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaArrowRotateLeft, FaCaretRight, FaPause } from "react-icons/fa6";
+import { FaCaretRight, FaPause, FaRotateLeft } from "react-icons/fa6";
 import { Button } from "../../components/Buttons";
 
 export default function Stopwatch() {
@@ -34,7 +34,7 @@ export default function Stopwatch() {
         <div className="text-6xl">{formattedTime}</div>
         <div className="rounded flex gap-1 justify-center">
           <Button disabled={start} onClick={handleReset} className="text-xl">
-            <FaArrowRotateLeft />
+            <FaRotateLeft />
           </Button>
           <Button className="text-4xl" onClick={toggleStart}>
             {start ? <FaPause /> : <FaCaretRight />}

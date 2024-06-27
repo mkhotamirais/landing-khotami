@@ -11,6 +11,8 @@ export default function Hero() {
   const yTransH1 = useTransform(scrollY, [0, 50], [0, -300]);
   const scaleTransP = useTransform(scrollY, [0, 100], [1, 0]);
   const rotateTransButtons = useTransform(scrollY, [0, 250], ["0", "90deg"]);
+  const yTransDown = useTransform(scrollY, [450, 550], [0, 500]);
+  const opacityTransDown = useTransform(scrollY, [450, 550], [1, 0]);
 
   const ySpringH1 = useSpring(yTransH1, { stiffness: 300, damping: 30 });
 
@@ -47,7 +49,12 @@ export default function Hero() {
           </Button>
         </motion.div>
       </div>
-      <motion.div initial={{ scale: 0, y: 100 }} animate={{ scale: 1, y: 0 }} transition={{ delay: 1 }}>
+      <motion.div
+        initial={{ scale: 0, y: 100 }}
+        animate={{ scale: 1, y: 0 }}
+        transition={{ delay: 1 }}
+        style={{ y: yTransDown, opacity: opacityTransDown }}
+      >
         <Link to="#summary">
           <Button>
             <FaArrowDownLong className="text-gray-700" />
