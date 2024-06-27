@@ -1,7 +1,7 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import { BtnMm } from "./pages/MainMenu";
-import { useMm } from "./store/useMm";
 import Clock from "./pages/apps/Clock";
+import { BtnMm } from "./pages/home/MainMenu";
+import { useMm } from "./store/useMm";
 
 export default function App() {
   const { removeOpenMm } = useMm();
@@ -9,7 +9,7 @@ export default function App() {
     removeOpenMm();
   };
   return (
-    <main className="flex flex-col" onClick={handleMain}>
+    <main className="flex flex-col min-h-screen" onClick={handleMain}>
       <Outlet />
       <BtnMm />
       <Clock className={"-z-50 opacity-[0.03]"} />

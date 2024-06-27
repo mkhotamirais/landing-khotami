@@ -1,9 +1,9 @@
 import { FaBars, FaCaretLeft, FaHouse, FaUser, FaXmark } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
-import { useMm } from "../store/useMm";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { mainMenus } from "../lib/data";
+import { useMm } from "../../store/useMm";
+import { mainMenus } from "../../lib/data";
 
 export function BtnMm() {
   const { openMm, toggleOpenMm } = useMm();
@@ -41,7 +41,7 @@ export function BtnMm() {
 
 export function BtnMenu() {
   const { openMm, removeOpenMm } = useMm();
-  const [hoveredMenu, setHoveredMenu] = useState("Landing Page");
+  const [hoveredMenu, setHoveredMenu] = useState(null);
 
   return (
     <AnimatePresence>
@@ -69,7 +69,7 @@ export function BtnMenu() {
                 <item.icon />
                 {hoveredMenu === item.label && (
                   <motion.div
-                    className="z-30 absolute bottom-0 left-full w-[70vw] overflow-hidden pl-2"
+                    className="z-30 absolute bottom-0 left-full w-max max-w-[70vw] overflow-hidden pl-2"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
