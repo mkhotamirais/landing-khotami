@@ -1,3 +1,5 @@
+import Processing from "../../components/Processing";
+
 export default function Lp1() {
-  return <div>Lp1</div>;
+  return <Processing />;
 }

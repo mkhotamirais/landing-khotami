@@ -1,3 +1,5 @@
+import Processing from "../../components/Processing";
+
 export default function Snack() {
-  return <div>Snack</div>;
+  return <Processing />;
 }

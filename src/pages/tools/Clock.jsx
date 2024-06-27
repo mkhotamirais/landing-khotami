@@ -21,7 +21,7 @@ export default function Clock({ className, size = 300 }) {
       width={size}
       height={size}
       viewBox="0 0 200 200"
-      className={`${className} border-2 rounded-full shadow-lg border-cyan-500`}
+      className={`${className} fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 border-2 rounded-full shadow-lg border-cyan-500`}
     >
       <circle cx="100" cy="100" r="95" stroke="black" strokeWidth="2" fill="none" />
       {/* Angka jam */}

@@ -1,4 +1,4 @@
-import { FaBookOpen, FaComputer, FaGamepad, FaYoutube } from "react-icons/fa6";
+import { FaBookOpen, FaComputer, FaGamepad, FaYoutube, FaScrewdriverWrench } from "react-icons/fa6";
 import { TbLibrary } from "react-icons/tb";
 
 export const mainMenus = [
@@ -14,6 +14,8 @@ export const mainMenus = [
     label: "Library",
     icon: TbLibrary,
     subMenus: [
+      { href: "bulb-1", label: "bulb 1" },
+      { href: "bulb-2", label: "bulb 2" },
       { href: "parallax-1", label: "Parallax 1" },
       { href: "parallax-2", label: "Parallax 2" },
       { href: "fliptext", label: "Flip Text" },
@@ -43,6 +45,14 @@ export const mainMenus = [
     subMenus: [
       { href: "color", label: "Color" },
       { href: "google-font-pairing", label: "Google Font Pairing" },
+    ],
+  },
+  {
+    label: "Tools",
+    icon: FaScrewdriverWrench,
+    subMenus: [
+      { href: "clock", label: "Clock" },
+      { href: "stopwatch", label: "Stopwatch" },
     ],
   },
 ];

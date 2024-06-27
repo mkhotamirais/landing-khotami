@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function FlipText() {
   const [num, setNum] = useState(1);
-  const [arr] = useState(["satu", "dua", "tiga", "empat puluh", "lima puluh"]);
+  const [arr] = useState(["Halo", "Nama saya Khotami", "Terima kasih atas kunjugannya"]);
   const [arrId, setArrId] = useState(0);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function FlipText() {
           exit="exit"
           variants={variants}
           transition={{ duration: 0.2 }}
-          className="text-3xl"
+          className="text-3xl text-center"
         >
           {arr[arrId]}
         </motion.div>

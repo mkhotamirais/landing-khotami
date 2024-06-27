@@ -18,6 +18,10 @@ import FlipText from "./pages/library/FlipText.jsx";
 import ErrorBoundary from "./ErrorBoundary.jsx";
 import Lp1 from "./pages/landing-page/Lp1.jsx";
 import Lp2 from "./pages/landing-page/Lp2.jsx";
+import Bulb1 from "./pages/library/Bulb1.jsx";
+import Bulb2 from "./pages/library/Bulb2.jsx";
+import Clock from "./pages/tools/Clock.jsx";
+import Stopwatch from "./pages/tools/Stopwatch.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,6 +37,8 @@ const router = createBrowserRouter(
       <Route path="snack" element={<Snack />} />
       <Route path="tictactoe" element={<Tictactoe />} />
       {/* library */}
+      <Route path="bulb-1" element={<Bulb1 />} />
+      <Route path="bulb-2" element={<Bulb2 />} />
       <Route path="parallax-1" element={<Parallax1 />} />
       <Route path="parallax-2" element={<Parallax2 />} />
       <Route path="fliptext" element={<FlipText />} />
@@ -41,6 +47,9 @@ const router = createBrowserRouter(
       {/* landing page */}
       <Route path="lp-1" element={<Lp1 />} />
       <Route path="lp-2" element={<Lp2 />} />
+      {/* tools */}
+      <Route path="clock" element={<Clock />} />
+      <Route path="stopwatch" element={<Stopwatch />} />
     </Route>
   )
 );
