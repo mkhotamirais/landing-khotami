@@ -1,4 +1,4 @@
-import { FaBars, FaCaretLeft, FaRegUser, FaXmark } from "react-icons/fa6";
+import { FaBars, FaChevronLeft, FaRegUser, FaXmark } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -33,7 +33,7 @@ export function BtnMm() {
         onClick={() => setHideBtn((prev) => !prev)}
         className={`${hideBtn ? "rotate-180" : ""} absolute left-full translate-x-2`}
       >
-        <FaCaretLeft />
+        <FaChevronLeft className="text-sm" />
       </button>
       <BtnMenu />
     </motion.div>

@@ -29,6 +29,10 @@ import ElementScroll1 from "./pages/library/ElementScroll1.jsx";
 import ElementScroll2 from "./pages/library/ElementScroll2.jsx";
 import FloatNav3 from "./pages/library/FloatNav3.jsx";
 import SourceImage from "./pages/theory/SourceImage.jsx";
+import Css2 from "./pages/css/Css2.jsx";
+import Svg1 from "./pages/svg/Svg1.jsx";
+import Svg2 from "./pages/svg/Svg2.jsx";
+import CssBackground from "./pages/css/CssBackground.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -39,10 +43,6 @@ const router = createBrowserRouter(
       <Route path="clock" element={<Clock />} />
       <Route path="stopwatch" element={<Stopwatch />} />
       <Route path="symbol-color" element={<SymbolColor />} />
-      {/* theroy */}
-      <Route path="color" element={<ColorTheory />} />
-      <Route path="source-image" element={<SourceImage />} />
-      <Route path="google-font-pairing" element={<GoogleFontPairingTheory />} />
       {/* youtube tutorial */}
       <Route path="webdecoded-1" element={<Webdecoded1 />} />
       <Route path="web-design-mastery-1" element={<Wdm1 />} />
@@ -64,6 +64,16 @@ const router = createBrowserRouter(
       {/* landing page */}
       <Route path="lp-1" element={<Lp1 />} />
       <Route path="lp-2" element={<Lp2 />} />
+      {/* theroy */}
+      <Route path="color" element={<ColorTheory />} />
+      <Route path="source-image" element={<SourceImage />} />
+      <Route path="google-font-pairing" element={<GoogleFontPairingTheory />} />
+      {/* css */}
+      <Route path="css-background" element={<CssBackground />} />
+      <Route path="css-2" element={<Css2 />} />
+      {/* svg */}
+      <Route path="svg-1" element={<Svg1 />} />
+      <Route path="svg-2" element={<Svg2 />} />
     </Route>
   )
 );

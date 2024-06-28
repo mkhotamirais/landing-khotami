@@ -5,7 +5,7 @@ import {
   IoLibraryOutline,
   IoBookOutline,
 } from "react-icons/io5";
-import { SlSocialYoutube } from "react-icons/sl";
+import { PiFileCss, PiFileSvg } from "react-icons/pi";
 
 export const mainMenus = [
   {
@@ -55,15 +55,6 @@ export const mainMenus = [
     ],
   },
   {
-    label: "Youtube Tutorial",
-    icon: SlSocialYoutube,
-    description: "Contains the results of my learning from following tutorials on various YouTube channels.",
-    subMenus: [
-      { href: "webdecoded-1", label: "Webdecoded 1" },
-      { href: "web-design-mastery-1", label: "Web Design Mastery 1" },
-    ],
-  },
-  {
     label: "Theory",
     icon: IoBookOutline,
     description: "Contains theoretical references as a foundation for building websites.",
@@ -71,6 +62,24 @@ export const mainMenus = [
       { href: "color", label: "Color" },
       { href: "source-image", label: "Source Image" },
       { href: "google-font-pairing", label: "Google Font Pairing" },
+    ],
+  },
+  {
+    label: "Css",
+    icon: PiFileCss,
+    description: "Contains basic layouts styled with pure CSS.",
+    subMenus: [
+      { href: "css-background", label: "Css Background" },
+      { href: "css-2", label: "Css 2" },
+    ],
+  },
+  {
+    label: "Svg & Canvas",
+    icon: PiFileSvg,
+    description: "Contains several graphics created in SVG or canvas format.",
+    subMenus: [
+      { href: "svg-1", label: "Svg 1" },
+      { href: "svg-2", label: "Svg 2" },
     ],
   },
 ];
