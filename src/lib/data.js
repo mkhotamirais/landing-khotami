@@ -69,6 +69,7 @@ export const mainMenus = [
     description: "Contains theoretical references as a foundation for building websites.",
     subMenus: [
       { href: "color", label: "Color" },
+      { href: "source-image", label: "Source Image" },
       { href: "google-font-pairing", label: "Google Font Pairing" },
     ],
   },

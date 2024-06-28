@@ -1,16 +1,6 @@
 import { useState } from "react";
-
-const googleFontPairingMenus = [
-  { title: null, content: null },
-  { title: "font-merriweather", content: "font-openSans" },
-  { title: "font-playfairDisplay", content: "font-montserrat" },
-  { title: "font-lora", content: "font-lato" },
-  { title: "font-roboto", content: "font-robotoSlab" },
-  { title: "font-PTSerif", content: "font-PTSans" },
-  { title: "font-oswald", content: "font-raleway" },
-  { title: "font-bitter", content: "font-sourceSans3" },
-  { title: "font-nunito", content: "font-nunitoSans" },
-];
+import { Button } from "../../components/Buttons";
+import { googleFontList, googleFontPairingMenus } from "../../lib/googleFont";
 
 export default function GoogleFontPairingTheory() {
   const [title, setTitle] = useState(null);
@@ -23,41 +13,47 @@ export default function GoogleFontPairingTheory() {
     setActive(i);
   };
 
+  const totalMono = googleFontList.filter((g) => g.type == "monospace").length;
+  const totalSerif = googleFontList.filter((g) => g.type == "serif").length;
+  const totalSansSerif = googleFontList.filter((g) => g.type == "sans-serif").length;
+
   return (
-    <div className="">
-      <div className="flex gap-1 justify-center flex-wrap">
+    <section className="p-3 sm:px-12 lg:px-24 bg-zinc-50">
+      <div className="flex gap-1 justify-center w-full sm:w-2/3 mx-auto flex-wrap mb-8">
         {googleFontPairingMenus.map((item, i) => (
-          <button
+          <Button
             key={i}
             onClick={() => handleClick(`${item.title}`, `${item.content}`, i)}
-            className={`border ${
-              active === i ? "bg-cyan-700" : "bg-cyan-500"
-            }  hover:opacity-50 text-white px-2 rounded-lg`}
+            className={`border ${active === i ? "border-cyan-700" : "border-gray-300"}`}
+            className2={`p-1 px-2`}
           >
-            {item.title ? `${item.title.split("-")[1]} & ${item.content.split("-")[1]}` : "Default"}
-          </button>
+            {i}
+          </Button>
         ))}
       </div>
-      <h2 className={`${title} text-3xl`}>Google Font Pairing</h2>
-      <p className={`${content}`}>
-        Merriweather & Open Sans: Merriweather (untuk judul): Sebuah serif yang elegan dan mudah dibaca. Open Sans
-        (untuk teks isi): Sebuah sans-serif yang bersih dan modern. <br />
-        Playfair Display & Montserrat: Playfair Display (untuk judul): Sebuah serif dengan nuansa klasik. Montserrat
-        (untuk teks isi): Sebuah sans-serif yang bergaya dan mudah dibaca. <br />
-        Lora & Lato: Lora (untuk judul): Sebuah serif yang elegan dan serbaguna. Lato (untuk teks isi): Sebuah
-        sans-serif yang modern dan mudah dibaca. <br />
-        Roboto & Roboto Slab: Roboto (untuk teks isi): Sebuah sans-serif yang sangat populer dan mudah dibaca. Roboto
-        Slab (untuk judul): Versi slab-serif dari Roboto, memberikan sedikit variasi sambil tetap menjaga konsistensi.{" "}
-        <br />
-        PT Serif & PT Sans: PT Serif (untuk judul): Sebuah serif yang klasik dan formal. PT Sans (untuk teks isi):
-        Sebuah sans-serif yang bersih dan mudah dibaca. <br />
-        Oswald & Raleway: Oswald (untuk judul): Sebuah sans-serif yang condong dan bergaya. Raleway (untuk teks isi):
-        Sebuah sans-serif yang ringan dan modern. <br />
-        Bitter & Source Sans Pro: Bitter (untuk judul): Sebuah serif yang kuat dan mudah dibaca. Source Sans Pro (untuk
-        teks isi): Sebuah sans-serif yang bersih dan profesional. <br />
-        Nunito & Nunito Sans: Nunito (untuk judul): Sebuah sans-serif yang bulat dan ramah. Nunito Sans (untuk teks
-        isi): Versi sans-serif dari Nunito, memberikan kesan konsistensi.
+      <h2 className={`${title} text-4xl my-3`}>
+        {title?.split("-")[1]} & {content?.split("-")[1]} (title & content)
+      </h2>
+      <p className={`${content} leading-relaxed`}>
+        Google Font Pairing: 1. Merriweather & Open Sans; 2. Playfair Display & Montserrat; 3. Lora & Lato; 4. Roboto &
+        Roboto Slab; 5. PT Serif & PT Sans; 6. Oswald & Raleway; 7. Bitter & Source Sans Pro; 8. Nunito & Nunito Sans;
+        9. Spectral & Rubik; 10. Oswald & Noto Sans; 11. Space Mono & Muli; 12. Fjalla One & Libre Baskerville; 13.
+        Cinzel & Fauna One; 14. Abril Fatface & Poppins; 15. Ubuntu & Lora
       </p>
-    </div>
+
+      <h2 className="text-3xl mt-5 mb-3">Google Font List</h2>
+      <p>
+        Monospace {totalMono} | Serif {totalSerif} | Sans-Serif {totalSansSerif}
+      </p>
+      <ol className="list-inside list-decimal">
+        {googleFontList
+          .sort((a, b) => (a.type > b.type ? 1 : a.type < b.type ? -1 : 0))
+          .map((item) => (
+            <li key={item.title} className={`${item.classTw} leading-relaxed`}>
+              Hello World | {item.title} | {item.type}
+            </li>
+          ))}
+      </ol>
+    </section>
   );
 }

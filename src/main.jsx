@@ -28,6 +28,7 @@ import ProgressBar1 from "./pages/library/ProgressBar1.jsx";
 import ElementScroll1 from "./pages/library/ElementScroll1.jsx";
 import ElementScroll2 from "./pages/library/ElementScroll2.jsx";
 import FloatNav3 from "./pages/library/FloatNav3.jsx";
+import SourceImage from "./pages/theory/SourceImage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,6 +41,7 @@ const router = createBrowserRouter(
       <Route path="symbol-color" element={<SymbolColor />} />
       {/* theroy */}
       <Route path="color" element={<ColorTheory />} />
+      <Route path="source-image" element={<SourceImage />} />
       <Route path="google-font-pairing" element={<GoogleFontPairingTheory />} />
       {/* youtube tutorial */}
       <Route path="webdecoded-1" element={<Webdecoded1 />} />

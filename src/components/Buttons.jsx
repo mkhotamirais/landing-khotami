@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export function Button({ children, onClick, className, className2, disabled = false }) {
+export function Button({ children, onClick, className, className2 = "p-3", disabled = false }) {
   const [isTapped, setIsTapped] = useState(false);
 
   const handleTap = () => {
@@ -18,10 +18,10 @@ export function Button({ children, onClick, className, className2, disabled = fa
     <button
       disabled={disabled}
       onClick={onClick}
-      className={`${className} relative disabled:opacity-50 flex items-center justify-center`}
+      className={`${className} rounded-full relative disabled:opacity-50 flex items-center justify-center`}
     >
       <motion.div
-        className={`${className2} rounded-full p-3 w-full`}
+        className={`rounded-full w-full ${className2} `}
         whileHover={{ backgroundColor: "#efefef" }}
         animate={{ backgroundColor: "#ffffff" }}
         transition={{ type: "tween", duration: 0.2 }}
