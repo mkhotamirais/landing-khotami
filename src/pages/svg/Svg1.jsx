@@ -1,3 +1,5 @@
+import Processing from "../../components/Processing";
+
 export default function Svg1() {
-  return <div>Svg1</div>;
+  return <Processing />;
 }

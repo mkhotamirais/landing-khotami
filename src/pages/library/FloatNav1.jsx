@@ -25,7 +25,7 @@ export default function FloatNav1() {
           ))}
         </div>
       </motion.nav>
-      <div className="flex items-center justify-center h-screen text-center px-3 fixed top-0">
+      <div className="flex items-center w-full justify-center h-screen text-center px-3 fixed top-0">
         Navbar hilang ketika scroll ke bawah dan muncuk ketika scroll ke atas
       </div>
     </section>

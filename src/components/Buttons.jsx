@@ -58,8 +58,10 @@ Prev.propTypes;
 
 export function BackHome() {
   return (
-    <Button href={"/"}>
-      <FaHouse />
-    </Button>
+    <Link to="/">
+      <Button>
+        <FaHouse />
+      </Button>
+    </Link>
   );
 }

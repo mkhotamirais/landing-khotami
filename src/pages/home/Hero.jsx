@@ -28,7 +28,7 @@ export default function Hero() {
     >
       <div className="flex flex-col items-center gap-6">
         <motion.h1 style={{ y: ySpringH1 }} className="uppercase text-4xl md:text-5xl font-oswald">
-          welcome to landing-khotami
+          welcome to landing-Apps
         </motion.h1>
         <motion.p style={{ scale: scaleTransP }} className="text-lg md:text-xl">
           Thank you for your visit. <br />

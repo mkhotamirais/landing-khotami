@@ -87,7 +87,7 @@ export function BtnMenu() {
                             to={itm.href}
                             key={i}
                             className="text-xs p-2 border rounded-lg hover:text-cyan-500"
-                            relative="path"
+                            replace
                           >
                             {itm.label}
                           </Link>

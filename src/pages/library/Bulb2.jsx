@@ -22,9 +22,9 @@ export default function Bulb2() {
       <div className="text-3xl text-center mt-20 px-3">Scroll (sampai ketinggian 50px) untuk memulai animasi</div>
       <motion.div
         id="blub1"
-        className="flex flex-wrap gap-5 w-[90vw] md:w-1/2 mx-auto min-h-32 p-6 border rounded mt-32 items-center justify-center"
+        className="flex flex-wrap gap-5 w-[90vw] md:w-1/2 mx-auto min-h-32 p-6 border rounded mt-72 items-center justify-center"
         variants={{
-          hidden: { opacity: 0 },
+          hidden: { opacity: 1 },
           visible: {
             opacity: 1,
             transition: {
