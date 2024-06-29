@@ -11,7 +11,7 @@ export default function Lp2() {
       onClick={() => setNav(false)}
       className="text-white font-bitter h-screen min-h-screen w-full relative"
     >
-      <video muted loop className="absolute size-full object-cover object-center">
+      <video muted autoPlay loop className="absolute size-full object-cover object-center">
         <source src="/images/pix-nature2.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-20" />
