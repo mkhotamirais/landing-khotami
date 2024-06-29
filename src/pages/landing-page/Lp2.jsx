@@ -27,7 +27,7 @@ export default function Lp2() {
       </header>
       <section className="relative h-[calc(100vh-4rem)] flex flex-col gap-4 items-start sm:items-center px-4 md:px-24">
         <h1 className="font-montserrat text-6xl md:text-7xl mt-24">Hello World</h1>
-        <p className="text-xl md:text-2xl text-left sm:text-center px-0 px-12">
+        <p className="text-xl md:text-2xl text-left sm:text-center px-0 sm:px-12">
           A landing page with a background video and three types of viewport navigation bars.
         </p>
         <button className="border mt-8 rounded-full p-2 px-6 hover:scale-105 active:scale-95 bg-cyan-500 bg-opacity-50 text-white transition-all duration-150">

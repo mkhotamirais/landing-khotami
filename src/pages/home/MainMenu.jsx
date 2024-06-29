@@ -1,10 +1,10 @@
-import { FaBars, FaChevronLeft, FaRegUser, FaXmark } from "react-icons/fa6";
+import { FaBars, FaRegUser, FaXmark } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMm } from "../../store/useMm";
 import { mainMenus } from "../../lib/data";
-import { IoHomeOutline } from "react-icons/io5";
+import { IoHomeOutline, IoChevronBackCircleOutline } from "react-icons/io5";
 
 export function BtnMm() {
   const { openMm, toggleOpenMm } = useMm();
@@ -31,9 +31,9 @@ export function BtnMm() {
       </motion.button>
       <button
         onClick={() => setHideBtn((prev) => !prev)}
-        className={`${hideBtn ? "rotate-180" : ""} absolute left-full translate-x-2`}
+        className={`${hideBtn ? "rotate-180" : ""} text-gray-800 absolute left-full translate-x-2`}
       >
-        <FaChevronLeft className="text-sm" />
+        <IoChevronBackCircleOutline />
       </button>
       <BtnMenu />
     </motion.div>
