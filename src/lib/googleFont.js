@@ -48,4 +48,6 @@ export const googleFontList = [
   { title: "Noto Sans", classTw: "font-notoSans", type: "sans-serif" },
   { title: "Rubik", classTw: "font-rubik", type: "sans-serif" },
   { title: "Spectral", classTw: "font-spectral", type: "serif" },
+  { title: "Alkatra", classTw: "font-alkatra", type: "system-ui" },
+  { title: "Sedgwick Ave", classTw: "font-sedgwickAve", type: "cursive" },
 ];

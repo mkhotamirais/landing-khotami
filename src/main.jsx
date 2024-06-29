@@ -33,6 +33,7 @@ import Css2 from "./pages/css/Css2.jsx";
 import Svg1 from "./pages/svg/Svg1.jsx";
 import Svg2 from "./pages/svg/Svg2.jsx";
 import CssBackground from "./pages/css/CssBackground.jsx";
+import WebTypes from "./pages/theory/WebTypes.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -68,6 +69,7 @@ const router = createBrowserRouter(
       <Route path="color" element={<ColorTheory />} />
       <Route path="source-image" element={<SourceImage />} />
       <Route path="google-font-pairing" element={<GoogleFontPairingTheory />} />
+      <Route path="web-types" element={<WebTypes />} />
       {/* css */}
       <Route path="css-background" element={<CssBackground />} />
       <Route path="css-2" element={<Css2 />} />

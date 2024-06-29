@@ -47,10 +47,10 @@ export default function GoogleFontPairingTheory() {
       </p>
       <ol className="list-inside list-decimal">
         {googleFontList
-          .sort((a, b) => (a.type > b.type ? 1 : a.type < b.type ? -1 : 0))
+          .sort((a, b) => (a.title > b.title ? 1 : a.title < b.title ? -1 : 0))
           .map((item) => (
             <li key={item.title} className={`${item.classTw} leading-relaxed`}>
-              Hello World | {item.title} | {item.type}
+              {item.title} | Hello World | {item.type}
             </li>
           ))}
       </ol>
