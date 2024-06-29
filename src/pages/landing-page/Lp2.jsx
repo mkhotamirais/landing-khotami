@@ -24,8 +24,8 @@ export default function Lp2() {
         <NavSmUp />
         <NavSmDown nav={nav} />
       </header>
-      <section className="relative h-[calc(100vh-4rem)] flex flex-col gap-4 items-start md:items-center justify-center px-4 lg:px-24">
-        <h1 className="font-montserrat text-6xl md:text-7xl">Hello World</h1>
+      <section className="relative h-[calc(100vh-4rem)] flex flex-col gap-4 items-start md:items-center px-4 lg:px-24">
+        <h1 className="font-montserrat text-6xl md:text-7xl mt-24">Hello World</h1>
         <p className="text-xl md:text-2xl">Ecommerce website with background video</p>
         <button className="border mt-8 rounded-full p-2 px-6 hover:scale-105 active:scale-95 bg-cyan-500 bg-opacity-50 text-white transition-all duration-150">
           Call To Action
