@@ -34,6 +34,12 @@ import Svg1 from "./pages/svg/Svg1.jsx";
 import Svg2 from "./pages/svg/Svg2.jsx";
 import CssBackground from "./pages/css/CssBackground.jsx";
 import WebTypes from "./pages/theory/WebTypes.jsx";
+import Lp3 from "./pages/landing-page/Lp3.jsx";
+import Jsonplaceholder from "./pages/public-api/jsonplaceholder/Jsonplaceholder.jsx";
+import Omdbapi from "./pages/public-api/omdbapi/Omdbapi.jsx";
+import SistemToko from "./pages/public-api/sistem-toko/SistemToko.jsx";
+import Newsapi from "./pages/public-api/newsapi/Newsapi.jsx";
+import Fakestoreapi from "./pages/public-api/fakestroreapi/Fakestoreapi.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -65,6 +71,7 @@ const router = createBrowserRouter(
       {/* landing page */}
       <Route path="lp-1" element={<Lp1 />} />
       <Route path="lp-2" element={<Lp2 />} />
+      <Route path="lp-3" element={<Lp3 />} />
       {/* theroy */}
       <Route path="color" element={<ColorTheory />} />
       <Route path="source-image" element={<SourceImage />} />
@@ -76,6 +83,12 @@ const router = createBrowserRouter(
       {/* svg */}
       <Route path="svg-1" element={<Svg1 />} />
       <Route path="svg-2" element={<Svg2 />} />
+      {/* public api */}
+      <Route path="jsonplaceholder" element={<Jsonplaceholder />} />
+      <Route path="omdbapi" element={<Omdbapi />} />
+      <Route path="sistem-toko" element={<SistemToko />} />
+      <Route path="fakestoreapi" element={<Fakestoreapi />} />
+      <Route path="newsapi" element={<Newsapi />} />
     </Route>
   )
 );

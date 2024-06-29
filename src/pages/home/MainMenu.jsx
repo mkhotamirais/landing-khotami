@@ -48,7 +48,7 @@ export function BtnMenu() {
     <AnimatePresence>
       {openMm && (
         <motion.div
-          className="z-40 fixed bottom-[4.5rem] left-4 w-12 border rounded-full text-xl flex flex-col items-center py-1 gap-1"
+          className="z-40 fixed bg-white bg-opacity-50 bottom-[4.5rem] left-4 w-12 border rounded-full text-xl flex flex-col items-center py-1 gap-1"
           initial={{ opacity: 0, scale: 0.8, y: 80 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 80 }}
@@ -70,13 +70,13 @@ export function BtnMenu() {
                 <item.icon />
                 {hoveredMenu === item.label && (
                   <motion.div
-                    className="z-30 absolute bottom-0 left-full w-max max-w-[70vw] overflow-hidden pl-2"
+                    className="z-30 absolute bottom-0 left-full w-max max-w-[60vw] md:max-w-[40vw] overflow-hidden pl-2"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="border rounded-xl bg-white w-full text-left p-2">
+                    <div className="border rounded-xl bg-white bg-opacity-50 backdrop-blur-sm w-full text-left p-2">
                       <h3 className="text-lg font-medium mb-2">{item.label}</h3>
                       <div className="flex flex-wrap gap-1">
                         {item.subMenus.map((itm, i) => (
@@ -86,7 +86,7 @@ export function BtnMenu() {
                             }}
                             to={itm.href}
                             key={i}
-                            className="text-xs p-2 border rounded-lg hover:text-cyan-500"
+                            className="text-xs p-2 bg-white rounded-lg hover:text-cyan-500"
                             replace
                           >
                             {itm.label}

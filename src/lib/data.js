@@ -6,6 +6,7 @@ import {
   IoBookOutline,
 } from "react-icons/io5";
 import { PiFileCss, PiFileSvg } from "react-icons/pi";
+import { HiOutlineCog6Tooth } from "react-icons/hi2";
 
 export const mainMenus = [
   {
@@ -25,6 +26,19 @@ export const mainMenus = [
     subMenus: [
       { href: "lp-1", label: "lp 1" },
       { href: "lp-2", label: "lp 2" },
+      { href: "lp-3", label: "lp 3" },
+    ],
+  },
+  {
+    label: "Public Api",
+    icon: HiOutlineCog6Tooth,
+    description: "Contains several landing page models from various types of websites.",
+    subMenus: [
+      { href: "jsonplaceholder", label: "Jsonplaceholder" },
+      { href: "omdbapi", label: "Omdbapi" },
+      { href: "sistem-toko", label: "Sistem Toko" },
+      { href: "newsapi", label: "Newsapi" },
+      { href: "fakestoreapi", label: "Fakestoreapi" },
     ],
   },
   {
