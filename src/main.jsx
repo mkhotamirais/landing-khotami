@@ -40,6 +40,13 @@ import Omdbapi from "./pages/public-api/omdbapi/Omdbapi.jsx";
 import SistemToko from "./pages/public-api/sistem-toko/SistemToko.jsx";
 import Newsapi from "./pages/public-api/newsapi/Newsapi.jsx";
 import Fakestoreapi from "./pages/public-api/fakestroreapi/Fakestoreapi.jsx";
+import Canvas2 from "./pages/svg/Canvas2.jsx";
+import Canvas1 from "./pages/svg/Canvas1.jsx";
+import JpUser from "./pages/public-api/jsonplaceholder/JpUser.jsx";
+import JpPost from "./pages/public-api/jsonplaceholder/JpPost.jsx";
+import JpUserSingle from "./pages/public-api/jsonplaceholder/JpUserSingle.jsx";
+import JpPostSingle from "./pages/public-api/jsonplaceholder/JpPostSingle.jsx";
+import Paginasi from "./pages/library/Paginasi.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -68,6 +75,7 @@ const router = createBrowserRouter(
       <Route path="progress-bar-1" element={<ProgressBar1 />} />
       <Route path="element-scroll-1" element={<ElementScroll1 />} />
       <Route path="element-scroll-2" element={<ElementScroll2 />} />
+      <Route path="paginasi" element={<Paginasi />} />
       {/* landing page */}
       <Route path="lp-1" element={<Lp1 />} />
       <Route path="lp-2" element={<Lp2 />} />
@@ -83,8 +91,20 @@ const router = createBrowserRouter(
       {/* svg */}
       <Route path="svg-1" element={<Svg1 />} />
       <Route path="svg-2" element={<Svg2 />} />
+      <Route path="canvas-1" element={<Canvas1 />} />
+      <Route path="canvas-2" element={<Canvas2 />} />
       {/* public api */}
-      <Route path="jsonplaceholder" element={<Jsonplaceholder />} />
+      <Route path="jsonplaceholder" element={<Jsonplaceholder />}>
+        <Route index element={<JpUser />} />
+        <Route path="jp-user">
+          <Route index element={<JpUser />} />
+          <Route path=":id" element={<JpUserSingle />} />
+        </Route>
+        <Route path="jp-post">
+          <Route index element={<JpPost />} />
+          <Route path=":id" element={<JpPostSingle />} />
+        </Route>
+      </Route>
       <Route path="omdbapi" element={<Omdbapi />} />
       <Route path="sistem-toko" element={<SistemToko />} />
       <Route path="fakestoreapi" element={<Fakestoreapi />} />

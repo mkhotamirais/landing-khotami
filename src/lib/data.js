@@ -57,6 +57,7 @@ export const mainMenus = [
       { href: "float-nav-1", label: "Float Nav 1" },
       { href: "float-nav-2", label: "Float Nav 2" },
       { href: "float-nav-3", label: "Float Nav 3" },
+      { href: "paginasi", label: "Paginasi" },
     ],
   },
   {
@@ -95,6 +96,8 @@ export const mainMenus = [
     subMenus: [
       { href: "svg-1", label: "Svg 1" },
       { href: "svg-2", label: "Svg 2" },
+      { href: "canvas-1", label: "Canvas-1" },
+      { href: "canvas-2", label: "Canvas-2" },
     ],
   },
 ];
