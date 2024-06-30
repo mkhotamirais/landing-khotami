@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useJp } from "../../../store/usePublicapi";
+import { useJp } from "../../../store/useJp";
 import { JpUserCardItems, JpUserTableItems } from "./JpUserItems";
 import { GridCard, Loading, SetView } from "./JpUtils";
 

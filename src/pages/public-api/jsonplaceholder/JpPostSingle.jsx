@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useJp } from "../../../store/usePublicapi";
+import { useJp } from "../../../store/useJp";
 import { useEffect } from "react";
 import { Loading, Prev } from "./JpUtils";
 

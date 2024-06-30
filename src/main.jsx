@@ -47,6 +47,7 @@ import JpPost from "./pages/public-api/jsonplaceholder/JpPost.jsx";
 import JpUserSingle from "./pages/public-api/jsonplaceholder/JpUserSingle.jsx";
 import JpPostSingle from "./pages/public-api/jsonplaceholder/JpPostSingle.jsx";
 import Paginasi from "./pages/library/Paginasi.jsx";
+import JpHome from "./pages/public-api/jsonplaceholder/JpHome.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -95,7 +96,7 @@ const router = createBrowserRouter(
       <Route path="canvas-2" element={<Canvas2 />} />
       {/* public api */}
       <Route path="jsonplaceholder" element={<Jsonplaceholder />}>
-        <Route index element={<JpUser />} />
+        <Route index element={<JpHome />} />
         <Route path="jp-user">
           <Route index element={<JpUser />} />
           <Route path=":id" element={<JpUserSingle />} />

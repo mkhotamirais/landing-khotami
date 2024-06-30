@@ -1,8 +1,9 @@
-import { useJp } from "../../../store/usePublicapi";
+import { useJp } from "../../../store/useJp";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 
 const navMenu = [
+  { href: "", label: "home" },
   { href: "jp-user", label: "user" },
   { href: "jp-post", label: "post" },
 ];
@@ -24,7 +25,7 @@ export default function Jsonplaceholder() {
         <NavMdUp />
         <NavMdDown />
       </header>
-      <section onClick={handleClick} className="min-h-[calc(100vh-4rem)] border border-red-500 text-sm px-4 md:px-24">
+      <section onClick={handleClick} className="min-h-[calc(100vh-4rem)] text-sm px-4 md:px-24">
         <Outlet />
       </section>
     </main>
