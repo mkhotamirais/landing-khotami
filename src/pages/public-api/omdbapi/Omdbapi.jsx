@@ -1,13 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useOmdb } from "../../../store/useOmdb";
 import { Loading } from "./OmdbUtils";
 import OmdbItems from "./OmdbItems";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 export default function Omdbapi() {
-  const { movies, getMovies, loadMoviesPage, errMoviesPage } = useOmdb();
+  const { s, setS, movies, getMovies, loadMoviesPage, errMoviesPage } = useOmdb();
+  const [search, setSearch] = useState("");
   useEffect(() => {
-    getMovies();
-  }, [getMovies]);
+    getMovies(s);
+  }, [getMovies, s]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setS(search);
+  };
+
   let content;
   if (loadMoviesPage) content = <Loading />;
   else if (errMoviesPage) content = <div>error</div>;
@@ -21,8 +29,22 @@ export default function Omdbapi() {
   }
 
   return (
-    <section className="min-h-screen w-full px-2 lg:px-12">
-      <h1 className="roboto text-2xl font-medium text-center">ObdmApi</h1>
+    <section className="bg-gray-700 relative min-h-screen w-full px-2 lg:px-16 py-3">
+      <div className="flex justify-between my-3">
+        <h1 className="roboto text-2xl text-white font-medium text-center">ObdmApi</h1>
+        <form onSubmit={handleSearch} className="flex gap-1 w-48">
+          <input
+            type="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="p-2 bg-inherit border rounded-lg w-full"
+            placeholder="Search here..."
+          />
+          <button className="border w-10 rounded-lg flex items-center justify-center hover:opacity-50">
+            <FaMagnifyingGlass />
+          </button>
+        </form>
+      </div>
       {content}
     </section>
   );
