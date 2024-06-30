@@ -29,10 +29,7 @@ import ElementScroll1 from "./pages/library/ElementScroll1.jsx";
 import ElementScroll2 from "./pages/library/ElementScroll2.jsx";
 import FloatNav3 from "./pages/library/FloatNav3.jsx";
 import SourceImage from "./pages/theory/SourceImage.jsx";
-import Css2 from "./pages/css/Css2.jsx";
-import Svg1 from "./pages/svg/Svg1.jsx";
-import Svg2 from "./pages/svg/Svg2.jsx";
-import CssBackground from "./pages/css/CssBackground.jsx";
+import CssBackground from "./pages/html/CssBackground.jsx";
 import WebTypes from "./pages/theory/WebTypes.jsx";
 import Lp3 from "./pages/landing-page/Lp3.jsx";
 import Jsonplaceholder from "./pages/public-api/jsonplaceholder/Jsonplaceholder.jsx";
@@ -40,8 +37,6 @@ import Omdbapi from "./pages/public-api/omdbapi/Omdbapi.jsx";
 import SistemToko from "./pages/public-api/sistem-toko/SistemToko.jsx";
 import Newsapi from "./pages/public-api/newsapi/Newsapi.jsx";
 import Fakestoreapi from "./pages/public-api/fakestroreapi/Fakestoreapi.jsx";
-import Canvas2 from "./pages/svg/Canvas2.jsx";
-import Canvas1 from "./pages/svg/Canvas1.jsx";
 import JpUser from "./pages/public-api/jsonplaceholder/JpUser.jsx";
 import JpPost from "./pages/public-api/jsonplaceholder/JpPost.jsx";
 import JpUserSingle from "./pages/public-api/jsonplaceholder/JpUserSingle.jsx";
@@ -51,12 +46,22 @@ import JpHome from "./pages/public-api/jsonplaceholder/JpHome.jsx";
 import Carousel1 from "./pages/library/Carousel1.jsx";
 import Accordion1 from "./pages/library/Accordion1.jsx";
 import Accordion2 from "./pages/library/Accordion2.jsx";
+import Svg1 from "./pages/html/Svg1.jsx";
+import Canvas1 from "./pages/html/Canvas1.jsx";
+import Sticky from "./pages/library/Sticky.jsx";
+import Html from "./pages/html/Html.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorBoundary />}>
       <Route index element={<Home />} />
       <Route path="portofolio-saya" element={<Portfolio />} />
+
+      {/* html */}
+      <Route path="html" element={<Html />} />
+      <Route path="svg-1" element={<Svg1 />} />
+      <Route path="canvas-1" element={<Canvas1 />} />
+      <Route path="css-background" element={<CssBackground />} />
 
       {/* apps */}
       <Route path="clock" element={<Clock />} />
@@ -72,6 +77,7 @@ const router = createBrowserRouter(
       <Route path="tictactoe" element={<Tictactoe />} />
 
       {/* library */}
+      <Route path="sticky-1" element={<Sticky />} />
       <Route path="bulb-1" element={<Bulb1 />} />
       <Route path="bulb-2" element={<Bulb2 />} />
       <Route path="parallax-1" element={<Parallax1 />} />
@@ -98,14 +104,6 @@ const router = createBrowserRouter(
       <Route path="source-image" element={<SourceImage />} />
       <Route path="google-font-pairing" element={<GoogleFontPairingTheory />} />
       <Route path="web-types" element={<WebTypes />} />
-      {/* css */}
-      <Route path="css-background" element={<CssBackground />} />
-      <Route path="css-2" element={<Css2 />} />
-      {/* svg */}
-      <Route path="svg-1" element={<Svg1 />} />
-      <Route path="svg-2" element={<Svg2 />} />
-      <Route path="canvas-1" element={<Canvas1 />} />
-      <Route path="canvas-2" element={<Canvas2 />} />
       {/* public api */}
       <Route path="jsonplaceholder" element={<Jsonplaceholder />}>
         <Route index element={<JpHome />} />

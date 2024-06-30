@@ -5,10 +5,44 @@ import {
   IoLibraryOutline,
   IoBookOutline,
 } from "react-icons/io5";
-import { PiFileCss, PiFileSvg } from "react-icons/pi";
 import { HiOutlineCog6Tooth } from "react-icons/hi2";
+import { LiaHtml5 } from "react-icons/lia";
 
 export const mainMenus = [
+  {
+    label: "Html",
+    icon: LiaHtml5,
+    description: "deskripsi",
+    subMenus: [
+      { href: "html", label: "Html" },
+      { href: "svg-1", label: "Svg 1" },
+      { href: "canvas-1", label: "Canvas-1" },
+      { href: "css-background", label: "Css Background" },
+    ],
+  },
+  {
+    label: "Library",
+    icon: IoLibraryOutline,
+    description: "Contains simple component models as building blocks for the UI.",
+    subMenus: [
+      { href: "sticky-1", label: "Sticky 1" },
+      { href: "element-scroll-1", label: "Element Scroll 1" },
+      { href: "element-scroll-2", label: "Element Scroll 2" },
+      { href: "progress-bar-1", label: "progress bar 1" },
+      { href: "bulb-1", label: "bulb 1" },
+      { href: "bulb-2", label: "bulb 2" },
+      { href: "parallax-1", label: "Parallax 1" },
+      { href: "parallax-2", label: "Parallax 2" },
+      { href: "fliptext", label: "Flip Text" },
+      { href: "float-nav-1", label: "Float Nav 1" },
+      { href: "float-nav-2", label: "Float Nav 2" },
+      { href: "float-nav-3", label: "Float Nav 3" },
+      { href: "paginasi", label: "Paginasi" },
+      { href: "carousel-1", label: "Carousel1" },
+      { href: "accordion-1", label: "Accordion 1" },
+      { href: "accordion-2", label: "Accordion 2" },
+    ],
+  },
   {
     label: "Apps",
     icon: IoAppsOutline,
@@ -42,28 +76,6 @@ export const mainMenus = [
     ],
   },
   {
-    label: "Library",
-    icon: IoLibraryOutline,
-    description: "Contains simple component models as building blocks for the UI.",
-    subMenus: [
-      { href: "element-scroll-1", label: "Element Scroll 1" },
-      { href: "element-scroll-2", label: "Element Scroll 2" },
-      { href: "progress-bar-1", label: "progress bar 1" },
-      { href: "bulb-1", label: "bulb 1" },
-      { href: "bulb-2", label: "bulb 2" },
-      { href: "parallax-1", label: "Parallax 1" },
-      { href: "parallax-2", label: "Parallax 2" },
-      { href: "fliptext", label: "Flip Text" },
-      { href: "float-nav-1", label: "Float Nav 1" },
-      { href: "float-nav-2", label: "Float Nav 2" },
-      { href: "float-nav-3", label: "Float Nav 3" },
-      { href: "paginasi", label: "Paginasi" },
-      { href: "carousel-1", label: "Carousel1" },
-      { href: "accordion-1", label: "Accordion 1" },
-      { href: "accordion-2", label: "Accordion 2" },
-    ],
-  },
-  {
     label: "Game",
     icon: IoGameControllerOutline,
     description: "Contains simple and easy-to-play games to fill your free time.",
@@ -81,26 +93,6 @@ export const mainMenus = [
       { href: "source-image", label: "Source Image" },
       { href: "google-font-pairing", label: "Google Font Pairing" },
       { href: "web-types", label: "Web Types" },
-    ],
-  },
-  {
-    label: "Css",
-    icon: PiFileCss,
-    description: "Contains basic layouts styled with pure CSS.",
-    subMenus: [
-      { href: "css-background", label: "Css Background" },
-      { href: "css-2", label: "Css 2" },
-    ],
-  },
-  {
-    label: "Svg & Canvas",
-    icon: PiFileSvg,
-    description: "Contains several graphics created in SVG or canvas format.",
-    subMenus: [
-      { href: "svg-1", label: "Svg 1" },
-      { href: "svg-2", label: "Svg 2" },
-      { href: "canvas-1", label: "Canvas-1" },
-      { href: "canvas-2", label: "Canvas-2" },
     ],
   },
 ];
