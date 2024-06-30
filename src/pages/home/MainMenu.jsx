@@ -54,7 +54,7 @@ export function BtnMenu() {
           exit={{ opacity: 0, scale: 0.8, y: 80 }}
           transition={{ type: "spring", stiffness: 400, damping: 20 }}
         >
-          {mainMenus.map((item) => (
+          {mainMenus.map((item, i) => (
             <div key={item.label}>
               <motion.button
                 key={item.label}
@@ -70,13 +70,17 @@ export function BtnMenu() {
                 <item.icon />
                 {hoveredMenu === item.label && (
                   <motion.div
-                    className="z-30 absolute bottom-0 left-full w-max max-w-[60vw] md:max-w-[40vw] overflow-hidden pl-2"
+                    className="z-30 absolute top-0 left-full w-max max-w-[60vw] md:max-w-[40vw] overflow-hidden pl-2"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -10 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="border rounded-xl bg-white bg-opacity-50 backdrop-blur-sm w-full text-left p-2">
+                    <div
+                      className={`${
+                        i > mainMenus.length - 4 ? "max-h-[11.5rem]" : "max-h-72"
+                      } border rounded-xl bg-white bg-opacity-50 overflow-y-scroll backdrop-blur-sm w-full text-left p-2`}
+                    >
                       <h3 className="text-lg font-medium mb-2">{item.label}</h3>
                       <div className="flex flex-wrap gap-1">
                         {item.subMenus.map((itm, i) => (

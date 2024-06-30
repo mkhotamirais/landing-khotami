@@ -48,22 +48,29 @@ import JpUserSingle from "./pages/public-api/jsonplaceholder/JpUserSingle.jsx";
 import JpPostSingle from "./pages/public-api/jsonplaceholder/JpPostSingle.jsx";
 import Paginasi from "./pages/library/Paginasi.jsx";
 import JpHome from "./pages/public-api/jsonplaceholder/JpHome.jsx";
+import Carousel1 from "./pages/library/Carousel1.jsx";
+import Accordion1 from "./pages/library/Accordion1.jsx";
+import Accordion2 from "./pages/library/Accordion2.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorBoundary />}>
       <Route index element={<Home />} />
       <Route path="portofolio-saya" element={<Portfolio />} />
+
       {/* apps */}
       <Route path="clock" element={<Clock />} />
       <Route path="stopwatch" element={<Stopwatch />} />
       <Route path="symbol-color" element={<SymbolColor />} />
+
       {/* youtube tutorial */}
       <Route path="webdecoded-1" element={<Webdecoded1 />} />
       <Route path="web-design-mastery-1" element={<Wdm1 />} />
+
       {/* game */}
       <Route path="snack" element={<Snack />} />
       <Route path="tictactoe" element={<Tictactoe />} />
+
       {/* library */}
       <Route path="bulb-1" element={<Bulb1 />} />
       <Route path="bulb-2" element={<Bulb2 />} />
@@ -77,10 +84,15 @@ const router = createBrowserRouter(
       <Route path="element-scroll-1" element={<ElementScroll1 />} />
       <Route path="element-scroll-2" element={<ElementScroll2 />} />
       <Route path="paginasi" element={<Paginasi />} />
+      <Route path="carousel-1" element={<Carousel1 />} />
+      <Route path="accordion-1" element={<Accordion1 />} />
+      <Route path="accordion-2" element={<Accordion2 />} />
+
       {/* landing page */}
       <Route path="lp-1" element={<Lp1 />} />
       <Route path="lp-2" element={<Lp2 />} />
       <Route path="lp-3" element={<Lp3 />} />
+
       {/* theroy */}
       <Route path="color" element={<ColorTheory />} />
       <Route path="source-image" element={<SourceImage />} />
