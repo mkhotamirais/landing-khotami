@@ -39,6 +39,7 @@ export const mainMenus = [
       { href: "float-nav-3", label: "Float Nav 3" },
       { href: "paginasi", label: "Paginasi" },
       { href: "carousel-1", label: "Carousel1" },
+      { href: "carousel-2", label: "Carousel2" },
       { href: "accordion-1", label: "Accordion 1" },
       { href: "accordion-2", label: "Accordion 2" },
     ],

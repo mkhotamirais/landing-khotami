@@ -1,55 +1,53 @@
-import { AnimatePresence } from "framer-motion";
-import { motion } from "framer-motion";
 import { useState } from "react";
 
-const data = [
-  { title: "carousel1", description: "", urlImg: "/images/pex-nature1.jpg" },
-  { title: "carousel2", description: "", urlImg: "/images/pex-nature2.jpg" },
-  { title: "carousel3", description: "", urlImg: "/images/pex-nature3.jpg" },
-  { title: "carousel3", description: "", urlImg: "/images/pex-beach1.jpg" },
+const carouselData = [
+  { label: "1", description: "", image: "" },
+  { label: "2", description: "", image: "" },
+  { label: "3", description: "", image: "" },
+  { label: "4", description: "", image: "" },
 ];
 
 export default function Carousel1() {
-  const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlePrev = () => {
-    setDirection(-1);
-    setIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
-  };
+  const handlePrev = () => setCurrentIndex((prevIndex) => (prevIndex === 0 ? carouselData.length - 1 : prevIndex - 1));
+  const handleNext = () => setCurrentIndex((prevIndex) => (prevIndex === carouselData.length - 1 ? 0 : prevIndex + 1));
 
-  const handleNext = () => {
-    setDirection(1);
-    setIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
-  };
   return (
-    <section className="w-full min-h-screen">
-      <div className="relative w-[70vw] h-[60vh] mx-auto border border-red-500 flex flex-row overflow-hidden">
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={index}
-            custom={direction}
-            initial={{ x: direction === 1 ? "-100%" : "100%", opacity: 1 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: direction === 1 ? "100%" : "-100%", opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="absolute object-cover object-center h-full w-full"
-          >
-            <img loading="eager" src={data[index].urlImg} alt={data[index].title} className="h-full w-full" />
-          </motion.div>
-        </AnimatePresence>
-        <button
-          onClick={handlePrev}
-          className="bg-gray-500 absolute left-0 top-1/2 transform -translate-y-1/2 text-4xl text-white"
-        >
+    <section className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="relative aspect-square w-[300px] border mx-auto bg-white">
+        {/* carousel content */}
+        <div className="flex h-full overflow-hidden">
+          {carouselData.map((item, index) => (
+            <div
+              key={index}
+              className="border border-gray-500 relative min-w-full transition-transform duration-300"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              <img src={item.image} alt={`Slide ${index}`} className="w-full h-full" />
+              <div className="absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 text-3xl">{item.label}</div>
+            </div>
+          ))}
+        </div>
+        {/* prev/next */}
+        <button onClick={handlePrev} className="absolute top-1/2 left-0 -translate-y-1/2">
           Prev
         </button>
-        <button
-          onClick={handleNext}
-          className="bg-gray-500 absolute right-0 top-1/2 transform -translate-y-1/2 text-4xl text-white"
-        >
+        <button onClick={handleNext} className="absolute top-1/2 right-0  -translate-y-1/2">
           Next
         </button>
+        {/* dots */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-3">
+          {carouselData.map((item, i) => (
+            <button
+              onClick={() => setCurrentIndex(i)}
+              key={i}
+              className={`${currentIndex === i ? "border" : "border-none"} border-gray-500 aspect-square w-8`}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

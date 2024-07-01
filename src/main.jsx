@@ -50,6 +50,7 @@ import Svg1 from "./pages/html/Svg1.jsx";
 import Canvas1 from "./pages/html/Canvas1.jsx";
 import Sticky from "./pages/library/Sticky.jsx";
 import Html from "./pages/html/Html.jsx";
+import Carousel2 from "./pages/library/Carousel2.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -91,6 +92,7 @@ const router = createBrowserRouter(
       <Route path="element-scroll-2" element={<ElementScroll2 />} />
       <Route path="paginasi" element={<Paginasi />} />
       <Route path="carousel-1" element={<Carousel1 />} />
+      <Route path="carousel-2" element={<Carousel2 />} />
       <Route path="accordion-1" element={<Accordion1 />} />
       <Route path="accordion-2" element={<Accordion2 />} />
 
