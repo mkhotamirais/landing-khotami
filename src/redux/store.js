@@ -4,7 +4,7 @@ import omdbapiReducer from "./features/omdbapiSlice";
 import jpReducer, { getPosts, getUsers } from "./features/jpSlice";
 import siskoReducer, { getSiskoProducts } from "./features/siskoSlice";
 import newsapiReducer from "./features/newsapiSlice";
-import fksapiReducer from "./features/fksapiSlice";
+import fksapiReducer, { getFakeProducts } from "./features/fksapiSlice";
 
 export const store = configureStore({
   reducer: {
@@ -20,5 +20,5 @@ export const store = configureStore({
 
 store.dispatch(getUsers());
 store.dispatch(getPosts());
-// store.dispatch(getFakeProducts());
+store.dispatch(getFakeProducts());
 store.dispatch(getSiskoProducts());

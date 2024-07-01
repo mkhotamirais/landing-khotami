@@ -10,9 +10,9 @@ export const getNews = createAsyncThunk("news/getNews", async (data, { rejectWit
     let top, query;
     if (!data?.top || data?.top === null || data?.top === "") top = "everything";
     else top = data?.top;
-    if (!data?.queryObj?.q || data?.queryObj?.q === null || data?.queryObj?.q === "")
-      query = { q: "tesla", ...data?.queryObj };
-    else query = { q: data?.queryOj?.q, ...data?.queryObj };
+    if (!data?.queryObj?.q || data?.queryObj?.q === null || data?.queryObj?.q === "") {
+      query = { q: "jokowi", ...data?.queryObj };
+    } else query = { q: data?.queryOj?.q ? data?.queryObj.q : "jokowi", ...data?.queryObj };
     const queryString = Object.entries(query)
       .map((item) => item.join("="))
       .join("&");

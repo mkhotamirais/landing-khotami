@@ -72,6 +72,7 @@ import Sisko2Checkout from "./pages/public-api/sistom-toko2/Sisko2Checkout.jsx";
 import Sisko2Invoice from "./pages/public-api/sistom-toko2/Sisko2Invoice.jsx";
 import Sisko2Detail from "./pages/public-api/sistom-toko2/Sisko2Detail.jsx";
 import Sisko2Cart from "./pages/public-api/sistom-toko2/Sisko2Cart.jsx";
+import Fksapi2Detail from "./pages/public-api/fakestoreapi2/Fksapi2Detail.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -162,7 +163,10 @@ const router = createBrowserRouter(
           <Route path="detail/:id" element={<Jp2PostDetail />} />
         </Route>
       </Route>
-      <Route path="fakestoreapi-2" element={<Fakestoreapi2 />} />
+      <Route path="fakestoreapi-2">
+        <Route index element={<Fakestoreapi2 />} />
+        <Route path="detail/:id" element={<Fksapi2Detail />} />
+      </Route>
       <Route path="newsapi-2" element={<Newsapi2 />} />
       <Route path="omdbapi-2" element={<Omdbapi2 />} />
       <Route path="sistem-toko-2">
