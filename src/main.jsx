@@ -66,6 +66,8 @@ import Jp2User from "./pages/public-api/jsonplaceholder2/Jp2User.jsx";
 import Jp2UserDetail from "./pages/public-api/jsonplaceholder2/Jp2UserDetail.jsx";
 import Jp2Post from "./pages/public-api/jsonplaceholder2/Jp2Post.jsx";
 import Jp2PostDetail from "./pages/public-api/jsonplaceholder2/Jp2PostDetail.jsx";
+import { Provider } from "react-redux";
+import { store } from "./redux/store.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -166,6 +168,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );

@@ -122,3 +122,12 @@ export function ModalBool({
   );
 }
 ModalBool.propTypes;
+
+export const LoadingModal = ({ className }) => (
+  <div className={`${className} z-50 fixed inset-0 flex justify-center items-center`}>
+    <div className="bg-black bg-opacity-10 p-1 shadow-xl rounded-full text-white text-5xl">
+      <PiSpinner className="animate-spin" />
+    </div>
+  </div>
+);
+LoadingModal.propTypes;
