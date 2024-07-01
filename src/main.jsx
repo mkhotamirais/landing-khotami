@@ -20,7 +20,6 @@ import Lp1 from "./pages/landing-page/Lp1.jsx";
 import Lp2 from "./pages/landing-page/Lp2.jsx";
 import Bulb1 from "./pages/library/Bulb1.jsx";
 import Bulb2 from "./pages/library/Bulb2.jsx";
-import Portfolio from "./pages/portfolio/Portfolio.jsx";
 import Stopwatch from "./pages/apps/Stopwatch.jsx";
 import Clock from "./pages/apps/Clock.jsx";
 import SymbolColor from "./pages/apps/SymbolColor.jsx";
@@ -73,12 +72,13 @@ import Sisko2Invoice from "./pages/public-api/sistom-toko2/Sisko2Invoice.jsx";
 import Sisko2Detail from "./pages/public-api/sistom-toko2/Sisko2Detail.jsx";
 import Sisko2Cart from "./pages/public-api/sistom-toko2/Sisko2Cart.jsx";
 import Fksapi2Detail from "./pages/public-api/fakestoreapi2/Fksapi2Detail.jsx";
+import Portofolio from "./pages/portofolio/Portofolio.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorBoundary />}>
       <Route index element={<Home />} />
-      <Route path="portofolio-saya" element={<Portfolio />} />
+      <Route path="portofolio-saya" element={<Portofolio />} />
 
       {/* html */}
       <Route path="html" element={<Html />} />
