@@ -36,7 +36,7 @@ import Jsonplaceholder from "./pages/public-api/jsonplaceholder/Jsonplaceholder.
 import Omdbapi from "./pages/public-api/omdbapi/Omdbapi.jsx";
 import SistemToko from "./pages/public-api/sistem-toko/SistemToko.jsx";
 import Newsapi from "./pages/public-api/newsapi/Newsapi.jsx";
-import Fakestoreapi from "./pages/public-api/fakestroreapi/Fakestoreapi.jsx";
+import Fakestoreapi from "./pages/public-api/fakestoreapi/Fakestoreapi.jsx";
 import JpUser from "./pages/public-api/jsonplaceholder/JpUser.jsx";
 import JpPost from "./pages/public-api/jsonplaceholder/JpPost.jsx";
 import JpUserSingle from "./pages/public-api/jsonplaceholder/JpUserSingle.jsx";
@@ -56,6 +56,16 @@ import SiskoHome from "./pages/public-api/sistem-toko/SiskoHome.jsx";
 import SiskoProducts from "./pages/public-api/sistem-toko/SiskoProducts.jsx";
 import SiskoCart from "./pages/public-api/sistem-toko/SiskoCart.jsx";
 import Todo from "./pages/apps/todo/Todo.jsx";
+import Jsonplaceholder2 from "./pages/public-api/jsonplaceholder2/Jsonplaceholder2.jsx";
+import Fakestoreapi2 from "./pages/public-api/fakestoreapi2/Fakestoreapi2.jsx";
+import Newsapi2 from "./pages/public-api/newsapi2/Newsapi2.jsx";
+import Omdbapi2 from "./pages/public-api/omdbapi2/Omdbapi2.jsx";
+import SistemToko2 from "./pages/public-api/sistom-toko2/SistemToko2.jsx";
+import Jp2Home from "./pages/public-api/jsonplaceholder2/Jp2Home.jsx";
+import Jp2User from "./pages/public-api/jsonplaceholder2/Jp2User.jsx";
+import Jp2UserDetail from "./pages/public-api/jsonplaceholder2/Jp2UserDetail.jsx";
+import Jp2Post from "./pages/public-api/jsonplaceholder2/Jp2Post.jsx";
+import Jp2PostDetail from "./pages/public-api/jsonplaceholder2/Jp2PostDetail.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -135,6 +145,21 @@ const router = createBrowserRouter(
       </Route>
       <Route path="fakestoreapi" element={<Fakestoreapi />} />
       <Route path="newsapi" element={<Newsapi />} />
+      <Route path="jsonplaceholder-2" element={<Jsonplaceholder2 />}>
+        <Route index element={<Jp2Home />} />
+        <Route path="jp2-user">
+          <Route index element={<Jp2User />} />
+          <Route path="detail/:id" element={<Jp2UserDetail />} />
+        </Route>
+        <Route path="jp2-post">
+          <Route index element={<Jp2Post />} />
+          <Route path="detail/:id" element={<Jp2PostDetail />} />
+        </Route>
+      </Route>
+      <Route path="fakestoreapi-2" element={<Fakestoreapi2 />} />
+      <Route path="newsapi-2" element={<Newsapi2 />} />
+      <Route path="omdbapi-2" element={<Omdbapi2 />} />
+      <Route path="sistem-toko-2" element={<SistemToko2 />} />
     </Route>
   )
 );

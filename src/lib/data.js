@@ -71,10 +71,15 @@ export const mainMenus = [
     description: "Contains several landing page models from various types of websites.",
     subMenus: [
       { href: "jsonplaceholder", label: "Jsonplaceholder" },
+      { href: "jsonplaceholder-2", label: "Jsonplaceholder 2" },
       { href: "omdbapi", label: "Omdbapi" },
+      { href: "omdbapi-2", label: "Omdbapi 2" },
       { href: "sistem-toko", label: "Sistem Toko" },
+      { href: "sistem-toko-2", label: "Sistem Toko 2" },
       { href: "newsapi", label: "Newsapi" },
+      { href: "newsapi-2", label: "Newsapi 2" },
       { href: "fakestoreapi", label: "Fakestoreapi" },
+      { href: "fakestoreapi-2", label: "Fakestoreapi 2" },
     ],
   },
   {
