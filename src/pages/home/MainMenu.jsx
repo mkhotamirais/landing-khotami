@@ -7,8 +7,7 @@ import { mainMenus } from "../../lib/data";
 import { IoHomeOutline } from "react-icons/io5";
 
 export function BtnMm() {
-  const { openMm, toggleOpenMm } = useMm();
-  const [hideBtn, setHideBtn] = useState(false);
+  const { openMm, toggleOpenMm, heroBtn, toggleHeroBtn } = useMm();
   const handleClick = (e) => {
     e.stopPropagation();
     toggleOpenMm();
@@ -16,7 +15,7 @@ export function BtnMm() {
   return (
     <motion.div
       className={`z-50 fixed bottom-4 border rounded-full w-12 text-xl h-12 flex items-center justify-center shadow-xl`}
-      animate={{ left: hideBtn ? "-3rem" : "1rem" }}
+      animate={{ left: heroBtn ? "1rem" : "-3rem" }}
       transition={{ duration: 0.2, type: "spring", stiffness: 200, damping: 20 }}
     >
       <motion.button onClick={handleClick} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
@@ -30,10 +29,10 @@ export function BtnMm() {
         </motion.div>{" "}
       </motion.button>
       <button
-        onClick={() => setHideBtn((prev) => !prev)}
+        onClick={toggleHeroBtn}
         className={`${
-          hideBtn ? "rotate-180" : ""
-        } text-gray-800 absolute left-full translate-x-1 text-xs bg-white p-[0.1rem] rounded-full border border-white bg-opacity-50 backdrop-blur`}
+          heroBtn ? "rotate-180" : ""
+        } text-gray-800 absolute left-full translate-x-2 text-xs bg-white p-[0.1rem] rounded-full border border-white bg-opacity-50 backdrop-blur`}
       >
         <FaChevronLeft />
       </button>

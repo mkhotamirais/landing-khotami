@@ -5,7 +5,7 @@ import { Button } from "../../components/Buttons";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 export default function Hero() {
-  const { toggleOpenMm } = useMm();
+  const { toggleOpenMm, heroBtn, showHeroBtn } = useMm();
   const { scrollY } = useScroll();
 
   const yTransH1 = useTransform(scrollY, [0, 50], [0, -300]);
@@ -18,6 +18,7 @@ export default function Hero() {
 
   const handleClick = (e) => {
     e.stopPropagation();
+    if (!heroBtn) showHeroBtn();
     toggleOpenMm();
   };
   return (
