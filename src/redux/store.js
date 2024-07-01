@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import todoReducer from "./features/todoSlice";
 import omdbapiReducer from "./features/omdbapiSlice";
 import jpReducer, { getPosts, getUsers } from "./features/jpSlice";
-import siskoReducer from "./features/siskoSlice";
+import siskoReducer, { getSiskoProducts } from "./features/siskoSlice";
 import newsapiReducer from "./features/newsapiSlice";
 import fksapiReducer from "./features/fksapiSlice";
 
@@ -21,4 +21,4 @@ export const store = configureStore({
 store.dispatch(getUsers());
 store.dispatch(getPosts());
 // store.dispatch(getFakeProducts());
-// store.dispatch(getSiskoProducts());
+store.dispatch(getSiskoProducts());

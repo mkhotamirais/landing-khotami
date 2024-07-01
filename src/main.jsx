@@ -68,6 +68,10 @@ import Jp2Post from "./pages/public-api/jsonplaceholder2/Jp2Post.jsx";
 import Jp2PostDetail from "./pages/public-api/jsonplaceholder2/Jp2PostDetail.jsx";
 import { Provider } from "react-redux";
 import { store } from "./redux/store.js";
+import Sisko2Checkout from "./pages/public-api/sistom-toko2/Sisko2Checkout.jsx";
+import Sisko2Invoice from "./pages/public-api/sistom-toko2/Sisko2Invoice.jsx";
+import Sisko2Detail from "./pages/public-api/sistom-toko2/Sisko2Detail.jsx";
+import Sisko2Cart from "./pages/public-api/sistom-toko2/Sisko2Cart.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -161,7 +165,13 @@ const router = createBrowserRouter(
       <Route path="fakestoreapi-2" element={<Fakestoreapi2 />} />
       <Route path="newsapi-2" element={<Newsapi2 />} />
       <Route path="omdbapi-2" element={<Omdbapi2 />} />
-      <Route path="sistem-toko-2" element={<SistemToko2 />} />
+      <Route path="sistem-toko-2">
+        <Route index element={<SistemToko2 />} />
+        <Route path="detail/:id" element={<Sisko2Detail />} />
+        <Route path="cart" element={<Sisko2Cart />} />
+        <Route path="checkout" element={<Sisko2Checkout />} />
+        <Route path="invoice" element={<Sisko2Invoice />} />
+      </Route>
     </Route>
   )
 );
