@@ -31,7 +31,7 @@ export function BtnMm() {
       <button
         onClick={toggleHeroBtn}
         className={`${
-          heroBtn ? "rotate-180" : ""
+          heroBtn ? "" : "rotate-180"
         } text-gray-800 absolute left-full translate-x-2 text-xs bg-white p-[0.1rem] rounded-full border border-white bg-opacity-50 backdrop-blur`}
       >
         <FaChevronLeft />

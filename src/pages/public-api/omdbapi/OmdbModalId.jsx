@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useOmdb } from "../../../store/useOmdb";
 import { PiSpinner } from "react-icons/pi";
+import { FaXmark } from "react-icons/fa6";
 
 export default function OmdbModalId({ itemId, modalId, onClose }) {
   const { singleMovie: movie, loadSingleMovie, getMovieByimdbID } = useOmdb();
@@ -21,12 +22,12 @@ export default function OmdbModalId({ itemId, modalId, onClose }) {
   else
     content = (
       <>
-        <h2 className="font-roboto text-2xl mb-2">{movie?.Title}</h2>
+        <h2 className="font-roboto text-2xl mb-2 mr-12">{movie?.Title}</h2>
         <div className="font-robotoSlab">
           <img
             src={movie?.Poster}
             alt="image poster"
-            className="w-1/2 float-right md:float-left mr-3 h-[50vh] md:h-[63vh] rounded-xl object-cover ml-3 mb-3 "
+            className="w-1/2 float-right h-[50vh] md:h-[63vh] rounded-xl object-cover ml-3 mb-3 "
           />
           <div className="text-sm lg:text-base">
             <div className="mb-2">
@@ -86,8 +87,11 @@ export default function OmdbModalId({ itemId, modalId, onClose }) {
         onClick={(e) => e.stopPropagation()}
         className={`${
           modalId === itemId ? "scale-100" : "scale-0"
-        } bg-gradient-to-t from-red-500 to-blue-500 text-white p-3 w-[90vw] sm:w-2/3 h-[90vh] sm:h-[80vh] transition-all duration-150 rounded-2xl`}
+        } relative bg-gradient-to-t from-red-500 to-blue-500 text-white p-3 w-[90vw] sm:w-2/3 h-[80vh] overflow-y-scroll transition-all duration-150 rounded-2xl`}
       >
+        <button onClick={onClose} className="fixed right-4 top-4 text-lg hover:text-gray-400">
+          <FaXmark />
+        </button>
         {content}
       </div>
     </div>

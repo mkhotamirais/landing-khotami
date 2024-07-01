@@ -51,6 +51,10 @@ import Canvas1 from "./pages/html/Canvas1.jsx";
 import Sticky from "./pages/library/Sticky.jsx";
 import Html from "./pages/html/Html.jsx";
 import Carousel2 from "./pages/library/Carousel2.jsx";
+import SiskoDetail from "./pages/public-api/sistem-toko/SiskoDetail.jsx";
+import SiskoHome from "./pages/public-api/sistem-toko/SiskoHome.jsx";
+import SiskoProducts from "./pages/public-api/sistem-toko/SiskoProducts.jsx";
+import SiskoCart from "./pages/public-api/sistem-toko/SiskoCart.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -119,7 +123,14 @@ const router = createBrowserRouter(
         </Route>
       </Route>
       <Route path="omdbapi" element={<Omdbapi />} />
-      <Route path="sistem-toko" element={<SistemToko />} />
+      <Route path="sistem-toko" element={<SistemToko />}>
+        <Route index element={<SiskoHome />} />
+        <Route path="product">
+          <Route index element={<SiskoProducts />} />
+          <Route path=":id" element={<SiskoDetail />} />
+        </Route>
+        <Route path="cart" element={<SiskoCart />} />
+      </Route>
       <Route path="fakestoreapi" element={<Fakestoreapi />} />
       <Route path="newsapi" element={<Newsapi />} />
     </Route>
