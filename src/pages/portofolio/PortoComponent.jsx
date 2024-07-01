@@ -4,7 +4,8 @@ export const MyFoto = ({ className }) => {
   return (
     <figure className={`${className}`}>
       <img
-        src="https://github.com/mkhotamirais/mkhotamirais.github.io/blob/main/images/me2-removebg.png?raw=true"
+        // src="https://github.com/mkhotamirais/mkhotamirais.github.io/blob/main/images/me2-removebg.png?raw=true"
+        src="/images/me.png"
         alt="me"
         className="border-t-4 shadow-lg h-48 md:h-64 rounded-full bg-gradient-to-tr from-red-200 via-green-200 to-blue-200"
       />

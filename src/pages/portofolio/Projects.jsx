@@ -8,34 +8,33 @@ const projectsList = [
       "This project showcases data retrieved from public APIs, including Jsonplaceholder, OmdbAPI, FakestoreAPI, SistemToko, and NewsAPI. The data is presented in a grid system card format, ensuring compatibility across various viewport sizes. Features include dark mode, breadcrumbs, data filtering, and search functionality to enhance user experience and accessibility. The development of this project is approximately 70% complete, as additional public APIs will be integrated.",
     tools:
       "Front-end: React, Redux, Axios, Reacticons, Tailwindcss; Back-end: Public APIs (Jsonplaceholder, OmdbAPI, FakestoreAPI, SistemToko, and NewsAPI)",
-    githubLink: "https://github.com/mkhotamirais/mkhotami-app/tree/main/client/src/pages/client-app",
-    demoLink: "https://mkhotami-app.vercel.app/client-app/omdbapi",
+    githubLink: "https://github.com/mkhotamirais/landing-khotami",
+    demoLink: "https://landing-khotami.vercel.app/omdbapi",
   },
   {
     name: "todo",
     description:
       "This project explores 3 todo list implementations with identical CRUD functionality. Each uses different tools: some leverage React hooks useState, useEffect, useContext, and useReducer, while another employs Redux. Notifications vary: some are basic, while others utilize Notistack or React Hot Toast libraries. All data is stored in local storage. The development progress of this project has reached 96%. Despite appearing complete, there is a possibility that additional features will be added in the future.",
     tools: "Front-end: React, Redux, Tailwindcss, React-Icons, notistack, react-hot-toast; Back-end: localStorage",
-    githubLink: "https://github.com/mkhotamirais/mkhotami-app/tree/main/client/src/pages/client-app/todo",
-    demoLink: "https://mkhotami-app.vercel.app/client-app/todo",
+    githubLink: "https://github.com/mkhotamirais/landing-khotami",
+    demoLink: "https://landing-khotami.vercel.app/todo",
   },
   {
-    name: "mkhotami app",
-    description:
-      "This project is a collection of simple MERN stack projects that encompass CRUD HTTP requests, authentication, and authorization features. Additionally, it includes data search, pagination, filtering, and sorting functionalities. One of the projects in this collection is a dictionary application. The development of this project is only at 60% completion, as several other mini projects, including the Note project, will be added soon.",
-    tools:
-      "Front-end: React, Redux, React-router-dom, Tailwindcss, React-Icons, React-hot-toast; Backend: Nodejs, Expressjs, Mongoose. Bcrypt, Jwt, etc",
-    githubLink: "https://github.com/mkhotamirais/mkhotami-app/tree/main/client/src/pages/mern-app",
-    demoLink: "https://mkhotami-app.vercel.app/mern-app",
-  },
-  {
-    name: "mkhotami warung",
+    name: "mern khotami",
     description:
       "This project displays product data in a table and grid system layout. The data is retrieved from a MongoDB database and managed on the server side using Express.js. It includes authentication and authorization features where only admins can manage the data, while guests and users have restricted access. The project also offers search, filtering, and sorting functionalities, as well as pagination. Additionally, it is responsive to different viewports and includes a dark mode feature. The development of this project is approximately 80% complete, as the cart and invoice features have not yet been implemented.",
     tools:
       "Front-end: React, Redux, ReactIcons, Tailwindcss, React-hot-toast. Backend: Nodejs, Expressjs, Mongoose. Bcrypt, Jwt, etc.",
-    githubLink: "https://github.com/mkhotamirais/mkhotami-warung",
-    demoLink: "https://mkhotami-warung.vercel.app/",
+    githubLink: "https://github.com/mkhotamirais/mern-khotami",
+    demoLink: "https://mern-khotami.vercel.app/",
+  },
+  {
+    name: "hadinalmusri",
+    description:
+      "This is a website project for Hadinalmusri School in Pagaden Subang, operating solely on the client-side. It displays information including the profile, editorial team, advertisement information, gallery, contact, and career opportunities. It also features a dark mode. The development of this project is currently at 70%, with plans to develop the backend in the future.",
+    tools: "Front-end: React, Redux, React-router-dom, Tailwindcss, React-Icons.",
+    githubLink: "https://github.com/mkhotamirais/hadinalmusri",
+    demoLink: "https://hadinalmusri.com/",
   },
 ];
 
@@ -66,14 +65,6 @@ const Projects = () => {
               <span className="font-medium">Name : </span>
               {item.name}
             </div>
-            <div>
-              <span className="font-medium">Description : </span>
-              {item.description}
-            </div>
-            <div>
-              <span className="font-medium">Tools : </span>
-              {item.tools}
-            </div>
             <a
               href={item.githubLink}
               target="_blank"
@@ -90,6 +81,14 @@ const Projects = () => {
             >
               <FaGlobe /> Demo
             </a>
+            <div>
+              <span className="font-medium">Description : </span>
+              {item.description}
+            </div>
+            <div>
+              <span className="font-medium">Tools : </span>
+              {item.tools}
+            </div>
           </div>
         </div>
       ))}

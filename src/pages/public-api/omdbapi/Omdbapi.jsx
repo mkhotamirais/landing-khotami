@@ -26,8 +26,8 @@ export default function Omdbapi() {
   }
 
   return (
-    <section className="bg-gray-700 relative min-h-screen w-full px-2 lg:px-16 py-3">
-      <div className="sticky top-0 z-20 bg-slate-700 py-1">
+    <section className="bg-gray-700 relative min-h-screen w-full">
+      <div className="sticky top-0 z-20 py-[0.1rem] px-2 lg:px-16 bg-gradient-to-t from-slate-600 to-slate-800">
         <OmdbLogo className={"block sm:hidden"} />
         <div className="flex justify-between my-3 w-full">
           <OmdbLogo className={"hidden sm:block"} />
@@ -39,7 +39,7 @@ export default function Omdbapi() {
         <OmdbNotSearch className="flex sm:hidden w-full mb-3" />
       </div>
 
-      {content}
+      <main className="px-2 lg:px-16 py-3">{content}</main>
     </section>
   );
 }
