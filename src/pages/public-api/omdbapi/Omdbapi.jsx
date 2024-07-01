@@ -27,7 +27,7 @@ export default function Omdbapi() {
 
   return (
     <section className="bg-gray-700 relative min-h-screen w-full px-2 lg:px-16 py-3">
-      <div className="sticky top-0 z-50 bg-slate-700 py-1">
+      <div className="sticky top-0 z-20 bg-slate-700 py-1">
         <OmdbLogo className={"block sm:hidden"} />
         <div className="flex justify-between my-3 w-full">
           <OmdbLogo className={"hidden sm:block"} />

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import OmdbModalId from "./OmdbModalId";
+import { motion } from "framer-motion";
 
 export default function OmdbItems({ item }) {
   const [modalId, setModalId] = useState(null);
@@ -9,7 +10,9 @@ export default function OmdbItems({ item }) {
 
   return (
     <>
-      <button
+      <motion.button
+        initial={{ scale: 0.8 }}
+        animate={{ scale: 1 }}
         onClick={() => setModalId(item?.imdbID)}
         style={{ background: `linear-gradient(to top, rgba(0,0,0,.9), rgba(0,0,0,.5)), url(${item?.Poster})` }}
         className="z-0 relative border bg-center bg-cover rounded overflow-hidden group"
@@ -26,7 +29,7 @@ export default function OmdbItems({ item }) {
         <h2 className="font-robotoSlab text-white p-2 min-h-20 flex items-center justify-center bg-gradient-to-t from-[rgba(0,0,0,.5)] to-[rgba(255,255,255,.1)]">
           {item?.Title}
         </h2>
-      </button>
+      </motion.button>
       <OmdbModalId itemId={item?.imdbID} modalId={modalId} onClose={onClose} />
     </>
   );

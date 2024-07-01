@@ -52,6 +52,7 @@ export const mainMenus = [
       { href: "clock", label: "Clock" },
       { href: "stopwatch", label: "Stopwatch" },
       { href: "symbol-color", label: "Symbol Color" },
+      { href: "todo", label: "todo" },
     ],
   },
   {

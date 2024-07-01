@@ -55,6 +55,7 @@ import SiskoDetail from "./pages/public-api/sistem-toko/SiskoDetail.jsx";
 import SiskoHome from "./pages/public-api/sistem-toko/SiskoHome.jsx";
 import SiskoProducts from "./pages/public-api/sistem-toko/SiskoProducts.jsx";
 import SiskoCart from "./pages/public-api/sistem-toko/SiskoCart.jsx";
+import Todo from "./pages/apps/todo/Todo.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -72,6 +73,7 @@ const router = createBrowserRouter(
       <Route path="clock" element={<Clock />} />
       <Route path="stopwatch" element={<Stopwatch />} />
       <Route path="symbol-color" element={<SymbolColor />} />
+      <Route path="todo" element={<Todo />} />
 
       {/* youtube tutorial */}
       <Route path="webdecoded-1" element={<Webdecoded1 />} />
