@@ -29,7 +29,7 @@ const contactMenus = [
     icon: <WhatsAppIcons8 size="48" />,
   },
   { text: "Mkhotami Rais", href: "https://www.linkedin.com/in/mkhotami-rais/", icon: <LinkedinIcons8 size="48" /> },
-  { text: "mkhotamirais@gmail.com", href: "mailto:mkhotamirais@gmail.com", icon: <GmailIcons8 size="48" /> },
+  { text: "tami01.job@gmail.com", href: "mailto:mkhotamirais@gmail.com", icon: <GmailIcons8 size="48" /> },
 ];
 
 const skillIcons = [
