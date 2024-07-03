@@ -73,6 +73,7 @@ import Sisko2Detail from "./pages/public-api/sistom-toko2/Sisko2Detail.jsx";
 import Sisko2Cart from "./pages/public-api/sistom-toko2/Sisko2Cart.jsx";
 import Fksapi2Detail from "./pages/public-api/fakestoreapi2/Fksapi2Detail.jsx";
 import Portofolio from "./pages/portofolio/Portofolio.jsx";
+import AllTheory from "./pages/theory/AllTheory.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -125,6 +126,7 @@ const router = createBrowserRouter(
       <Route path="lp-3" element={<Lp3 />} />
 
       {/* theroy */}
+      <Route path="all-theory" element={<AllTheory />} />
       <Route path="color" element={<ColorTheory />} />
       <Route path="source-image" element={<SourceImage />} />
       <Route path="google-font-pairing" element={<GoogleFontPairingTheory />} />

@@ -38,6 +38,8 @@ export const mainMenus = [
       { href: "float-nav-2", label: "Float Nav 2" },
       { href: "float-nav-3", label: "Float Nav 3" },
       { href: "paginasi", label: "Paginasi" },
+      { href: "paginasi-2", label: "Paginasi 2" },
+      { href: "paginasi-3", label: "Paginasi 3" },
       { href: "carousel-1", label: "Carousel1" },
       { href: "carousel-2", label: "Carousel2" },
       { href: "accordion-1", label: "Accordion 1" },
@@ -96,6 +98,7 @@ export const mainMenus = [
     icon: IoBookOutline,
     description: "Contains theoretical references as a foundation for building websites.",
     subMenus: [
+      { href: "all-theory", label: "All Theory" },
       { href: "color", label: "Color" },
       { href: "source-image", label: "Source Image" },
       { href: "google-font-pairing", label: "Google Font Pairing" },

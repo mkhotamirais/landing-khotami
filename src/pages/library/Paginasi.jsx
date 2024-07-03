@@ -27,14 +27,24 @@ const pageDatas = [
   { id: "24", letter: "x" },
   { id: "25", letter: "y" },
   { id: "26", letter: "z" },
+  { id: "27", letter: "aa" },
+  { id: "28", letter: "bb" },
+  { id: "29", letter: "cc" },
+  { id: "30", letter: "dd" },
+  { id: "31", letter: "ee" },
+  { id: "32", letter: "ff" },
+  { id: "33", letter: "gg" },
+  { id: "34", letter: "hh" },
+  { id: "35", letter: "ii" },
+  { id: "36", letter: "jj" },
 ];
 
 export default function Paginasi() {
-  const [totalPerPage, setTotalPerPage] = useState(10);
+  const [totalPerPage, setTotalPerPage] = useState(3);
+  const [pageKini, setPageKini] = useState(1);
+
   const totalData = pageDatas.length;
   const totalPage = Math.ceil(totalData / totalPerPage);
-
-  const [pageKini, setPageKini] = useState(1);
 
   const indexAkhir = pageKini * totalPerPage;
   const indexAwal = indexAkhir - totalPerPage;
@@ -44,6 +54,62 @@ export default function Paginasi() {
   const nextPage = () => (pageKini !== totalPage ? setPageKini(pageKini + 1) : null);
   const prevPage = () => (pageKini !== 1 ? setPageKini(pageKini - 1) : null);
 
+  const renderPagination = () => {
+    const pages = [];
+    const startPage = Math.max(1, pageKini - 2);
+    const endPage = Math.min(totalPage, pageKini + 2);
+
+    if (startPage > 1) {
+      pages.push(
+        <button
+          key={1}
+          onClick={() => setPageKini(1)}
+          className={`${pageKini === 1 ? "bg-gray-100" : "bg-white"} border aspect-square w-7`}
+        >
+          1
+        </button>
+      );
+      if (startPage > 2)
+        pages.push(
+          <span key="start-ellipsis" className="border aspect-square w-7 text-center">
+            ...
+          </span>
+        );
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(
+        <button
+          key={i}
+          onClick={() => setPageKini(i)}
+          className={`${pageKini === i ? "bg-gray-100" : "bg-white"} border aspect-square w-7`}
+        >
+          {i}
+        </button>
+      );
+    }
+
+    if (endPage < totalPage) {
+      if (endPage < totalPage - 1)
+        pages.push(
+          <span key="end-ellipsis" className="border aspect-square w-7 text-center">
+            ...
+          </span>
+        );
+      pages.push(
+        <button
+          key={totalPage}
+          onClick={() => setPageKini(totalPage)}
+          className={`${pageKini === totalPage ? "bg-gray-100" : "bg-white"} border aspect-square w-7`}
+        >
+          {totalPage}
+        </button>
+      );
+    }
+
+    return pages;
+  };
+
   return (
     <section className="bg-gray-50 min-h-screen w-[95vw] mx-auto flex items-center justify-center">
       <div className="border rounded p-3 w-full sm:w-1/2 lg:w-1/4 aspect-square bg-white">
@@ -51,19 +117,13 @@ export default function Paginasi() {
           <input
             value={totalPerPage}
             type="number"
-            min={5}
+            min={3}
             max={26}
             onChange={(e) => {
-              if (e.target.value < 5) {
-                e.target.value = 5;
-              }
-              if (e.target.value > 26) {
-                e.target.value = 26;
-              }
-              setTotalPerPage(e.target.value);
+              const value = Math.max(3, Math.min(26, Number(e.target.value)));
+              setTotalPerPage(value);
               setPageKini(1);
             }}
-            // className="border w-12 p-3 text-xl aspect-square appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             className="border w-20 p-3 text-xl"
           />
         </div>
@@ -71,17 +131,7 @@ export default function Paginasi() {
           <button disabled={pageKini === 1} onClick={prevPage} className="disabled:opacity-50 border px-2">
             prev
           </button>
-          {Array(totalPage)
-            .fill(totalPage)
-            .map((item, i) => (
-              <button
-                onClick={() => setPageKini(i + 1)}
-                key={i}
-                className={`${pageKini == i + 1 ? "bg-gray-100" : "bg-white"} border aspect-square w-7`}
-              >
-                {i + 1}
-              </button>
-            ))}
+          {renderPagination()}
           <button disabled={pageKini === totalPage} onClick={nextPage} className="disabled:opacity-50 border px-2">
             next
           </button>
@@ -97,3 +147,14 @@ export default function Paginasi() {
     </section>
   );
 }
+
+const PageBtn = ({ children, key, onClick, pageKini }) => (
+  <button
+    key={key}
+    onClick={onClick}
+    className={`${pageKini === key ? "bg-gray-100" : "bg-white"} border aspect-square w-7`}
+  >
+    {children}
+  </button>
+);
+PageBtn.propTypes;
