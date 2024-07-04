@@ -245,4 +245,83 @@ Selesaikan tanggungjawab, handover, penyerahan materi, kembalikan fasilitas kant
 Tinggalkan kesan positif, siapa tahu bertemu lagi, jangan lupa pamitan dengan rekan kerja biar mereka tahu. -
 `,
   },
+  {
+    title: "git github",
+    category: "vcs",
+    content: `Git adalah salah satu VCS, oleh Linus Torvalds mengatur source code fleksibel, revisi, kolaborasi, sharing
+          rekaman snapshot, bisa kembali ke perubahan sebelumnya,{" "}
+          <a href="https://git-scm.com/" target="blank" rel="noopener">
+            download git; Ada 3 wilayah: Working Tree, Staging Area dan History; git basic, git branch, git guil;
+            Mencatat dan trancking seluruh perubahan versi source code, kolaborasi open source; jenisnya github, gitlab,
+          bitbucket; tools: git, github, sourcetree, vscode, lightshoot, grepper, screen o matic,
+          Git command: git -v; pwd; cd; ls; q; mkdir new_dir; cd new_dir; git init; git config --list; git --list
+          --show-origin; git config --global user.name [your_username]; git config --global user.email[your_email]
+          git add [new_files]; git add .; git status git commit -m; -am; git config; git branch; git help; git log; log
+          -n; index.html; --oneline --graph; git checkout [5 digit hash][file_name]; git show [hash]; git checkout [hash]; git clean -f; git restore [file_name];
+ketika folder di init maka otomatis menjadi branch master/main; semua yang dilakukan di sutu branch tidak akan berefek pada branch lain;
+git branch; [new_branch]; git log; log --all --decorate --oneline --graph; git config --global alias.graph log --all; decorate --onelie --graph;
+alias graph="log --all --decorate --oneline --graph"; git checkout; git merge; git conflict;
+`,
+  },
+  {
+    title: "useState",
+    category: "react js",
+    content: `useState adalah salah satu hook react yang memungkinkan menambah state lokal ke functional component. sebelumnya
+        hanya class component yang dapat memiliki state namun dengan useState functional componen juga bisa memiliki staete.
+        State adalah object khusus yang bisa diinisialisasi dan dinamis yang menyimpan data atau informasi yang hanya bisa
+        diakses di komponen terkait. state: Variabel yang menyimpan nilai state saat ini. setState: Fungsi yang digunakan untuk memperbarui nilai state.
+        initialState: Nilai awal dari state, yang bisa berupa tipe data apapun (string, number, object, array, dll).`,
+  },
+  {
+    title: "useEffect",
+    category: "react js",
+    content: `useEffect (sideeffect/effect) adalah hook react yang digunakan untuk menangai efek samping dalam functional
+          component. hook ini menggantikan lifecycle class component. Side effect adalah operasi yang mempengaruhi sesuatu di
+          luar ruang lingkup fungsi seperti <b>pemanggilan api, event listener, manipulasi dom, time atau interval.</b>
+          Effect dependensi adalah array berisi identifier barupa variable atau fungsi yang tentukan kapan fungsi dipanggil.
+          jika tidak ada maka fungsi effect dipanggil saat komponen terdetensi rerender. jika array kosong effect dipanggil
+          saat render pertama. Render loop terjadi saat sebuah effect mengubah nilai dependensinya sendiri.
+          Clean up function adalah return berupa fungsi dari sebuah effect yang akan dijalankan saat komponen tidak lagi
+          digunakan. Banyak yang menyebut mirip componentWillUnmount namun sebenarnya berbeda. componentWillUnmount
+          dijalankan ketika komponen dihapus dari interface sedangkan clean up akan dipanggil ketika salah satu nilai dari
+          dependecy effect berubah. urutan eksekusi: render, effect, perubahan state, re-render dengan state baru, clean up
+          function, effect selanjutnya dijalankan`,
+  },
+  {
+    title: "memoisasi",
+    category: "react js",
+    content: `memoisasi komponen adalah teknik dalam react untuk meningkatkan performa aplikasi dengan menghindari render ulang
+        yang tidak perlu. melalui penyimpanan dan pembanding hasil render sebelumnya.
+        saat komponen render ulang, react melakukan sejumlah pekerjaan di belakang layar, termasuk membandingkan virtual dom
+        untuk menentukan apakah perlu perbarui tambilan di aktuan DOM. proses ini menjadi malah secara komputasi apalagi
+        logikanya kompleks. 
+        ketika komponen dibungkus denga memo react secara otomatis melakukan memoisasi komponen tersebut dan memutuskan
+        apakah perlu dirender ulang berdasarkan perubahan props atau tidak. 
+        proses yang mahal secara komputasi mengacu pada operasi atau perhitungan yang membutuhkan banyak sumber daya
+        komputasi, seperti waktu CPU atau memori. Dalam konteks React, ini dapat merujuk pada operasi yang memakan waktu saat
+        merender komponen, seperti melakukan perhitungan yang kompleks atau memproses banyak data.`,
+  },
+  {
+    title: "memo vs useMemo",
+    category: "react js",
+    content: `memo dan useMemo, keduanya berfungsi untuk memoisasi komponen. memo memoisasi keseluruhan komponen. useMemo memoisasi
+        nilai di dalam komponen. memo hanya memoisasi referensi dari props yang diterima oleh komponen tersebut. nilai lokal
+        tidak akan dimemoisasi, jika ingin memoisasi nilai lokal maka gunakan useMemo.`,
+  },
+  {
+    title: "useMemo vs useCallback",
+    category: "react js",
+    contet: `useMemo dan useCallback sama-sama untuk memoisasi, bedanya useMemo untuk memoisasi value sedangkan useCallback untuk
+        memoisasi function.`,
+  },
+  {
+    title: "useReducer",
+    category: "react js",
+    contet: `useReducer digunakan untuk mengelola state dengan skala yang lebih luas dibandingkan dengan yang dilakukan useState, dengan kata lain, useReducer adalah state berskala lebih besar dari useState`,
+  },
+  {
+    title: "useContext",
+    category: "react js",
+    content: "useContent adalah state management lintas komponen, biasanya dipadukan denga useReducer",
+  },
 ];

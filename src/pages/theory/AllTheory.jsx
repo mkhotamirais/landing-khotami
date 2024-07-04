@@ -14,8 +14,17 @@ export default function AllTheory() {
 
   let filteredTheory;
   filteredTheory = allTheory;
-  if (category || search) {
-    filteredTheory = filteredTheory.filter((t) => t.category === category && t.title.includes(search));
+
+  if (category) {
+    filteredTheory = filteredTheory.filter((t) => t.category === category);
+  }
+  if (search) {
+    filteredTheory = filteredTheory.filter((t) => t.title.toLowerCase().includes(search.toLowerCase()));
+  }
+  if (category && search) {
+    filteredTheory = filteredTheory.filter(
+      (t) => t.category === category && t.title.toLowerCase().includes(search.toLowerCase())
+    );
   }
 
   const totalPerPage = 10;

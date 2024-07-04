@@ -4,11 +4,26 @@ import {
   IoAppsOutline,
   IoLibraryOutline,
   IoBookOutline,
+  IoLogoReact,
 } from "react-icons/io5";
 import { HiOutlineCog6Tooth } from "react-icons/hi2";
 import { LiaHtml5 } from "react-icons/lia";
 
 export const mainMenus = [
+  {
+    label: "React",
+    icon: IoLogoReact,
+    description: "deskripsi",
+    subMenus: [
+      { href: "usestate", label: "useState" },
+      { href: "useeffect", label: "useEffect" },
+      { href: "usereducer", label: "useReducer" },
+      { href: "usememo", label: "useMemo" },
+      { href: "usecallback", label: "useCallback" },
+      { href: "memo", label: "memo" },
+      { href: "usecontext", label: "useContext" },
+    ],
+  },
   {
     label: "Html",
     icon: LiaHtml5,

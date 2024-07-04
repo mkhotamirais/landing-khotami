@@ -74,6 +74,13 @@ import Sisko2Cart from "./pages/public-api/sistom-toko2/Sisko2Cart.jsx";
 import Fksapi2Detail from "./pages/public-api/fakestoreapi2/Fksapi2Detail.jsx";
 import Portofolio from "./pages/portofolio/Portofolio.jsx";
 import AllTheory from "./pages/theory/AllTheory.jsx";
+import UseState from "./pages/react/UseState.jsx";
+import UseEffect from "./pages/react/UseEffect.jsx";
+import UseReducer from "./pages/react/UseReducer.jsx";
+import UseMemo from "./pages/react/UseMemo.jsx";
+import UseCallback from "./pages/react/UseCallback.jsx";
+import Memo from "./pages/react/Memo.jsx";
+import UseContext from "./pages/react/UseContext.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -178,6 +185,14 @@ const router = createBrowserRouter(
         <Route path="checkout" element={<Sisko2Checkout />} />
         <Route path="invoice" element={<Sisko2Invoice />} />
       </Route>
+      {/* react */}
+      <Route path="usestate" element={<UseState />} />
+      <Route path="useeffect" element={<UseEffect />} />
+      <Route path="usereducer" element={<UseReducer />} />
+      <Route path="usememo" element={<UseMemo />} />
+      <Route path="usecallback" element={<UseCallback />} />
+      <Route path="memo" element={<Memo />} />
+      <Route path="usecontext" element={<UseContext />} />
     </Route>
   )
 );
