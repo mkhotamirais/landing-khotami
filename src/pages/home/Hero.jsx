@@ -42,9 +42,12 @@ export default function Hero() {
           transition={{ delay: 0.5 }}
           className="flex  gap-3"
         >
-          <Link to="portofolio-saya">
+          {/* <Link to="portofolio-saya">
             <Button className={"border w-32 border-cyan-500 rounded-full capitalize"}>About Me</Button>
-          </Link>
+          </Link> */}
+          <a title="portofolio mkhotami" href="https://tami-next.vercel.app/portofolio-saya">
+            <Button className={"border w-32 border-cyan-500 rounded-full capitalize"}>About Me</Button>
+          </a>
           <Button onClick={handleClick} className={"w-32 border border-gray-500 rounded-full capitalize"}>
             eksplore
           </Button>
